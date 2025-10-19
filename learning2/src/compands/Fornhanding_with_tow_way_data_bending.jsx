@@ -16,9 +16,8 @@ const Fornhanding_with_tow_way_data_bending = () => {
           setTitel(e.target.value)
           console.log(e.target.value);
         }} />
-        <button className='w-16 h-8 bg-blue-500'>submit</button>
+        <button className='w-16 h-8 bg-green-500 cursor-pointer active:scale-90 hover:scale-12bg-green-500 '>submit</button>
       </form>
-
     </>
   )
 }

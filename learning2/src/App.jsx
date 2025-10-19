@@ -4,9 +4,20 @@ import Card from './compands/Card'
 import Card2 from './compands/Card2';
 import Counter from './compands/Counter';
 import Fornhanding_with_tow_way_data_bending from './compands/Fornhanding_with_tow_way_data_bending';
+import Useeffect from './compands/Useeffect';
+import Useref from './compands/useref';
+import Useref2 from './compands/Useref2';
+// import Useref from './compands/Useref';
+
+
 
 
 function App() {
+  useEffect(() => {
+    alert('welcome to my page')
+    console.log('welcome to my page')
+  }, [])
+
 
   const users = [
     {
@@ -71,8 +82,8 @@ function App() {
     },
   ];
   return (<>
-
-    {/* <Counter />
+    {/* 
+    <Counter />
     <div className='flex flex-wrap justify-center'>
       {users.map((c, index) => {
         return (
@@ -85,9 +96,12 @@ function App() {
         )
       })}
     </div>
-    <Card2 /> */}
+    <Card2 />
+  <Fornhanding_with_tow_way_data_bending /> */}
 
-    <Fornhanding_with_tow_way_data_bending />
+    <Useeffect />
+    <Useref />
+    <Useref2 />
 
 
   </>
