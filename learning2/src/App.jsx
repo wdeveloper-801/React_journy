@@ -10,10 +10,13 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
-import Nav from './pages/Nav';
+import Nav from './compands/Nav';
 import Notfound from './pages/Notfound';
 import MAN_TSHIRT from './pages/MAN_TSHIRT';
 import Man_trouzer from './pages/Man_trouzer';
+import Courses from './pages/Courses';
+import Courses_details from './pages/Courses_details';
+
 
 
 
@@ -89,6 +92,7 @@ function App() {
   ];
   return (<>
     <Nav />
+
     {/* <Counter /> 
     <div className='flex flex-wrap justify-center'>
       {users.map((c, index) => {
@@ -110,12 +114,14 @@ function App() {
     <Useref2 />
 
     <Routes>
-    <Route path="/" element={<Home />} />  {/* default route */}
+      <Route path="/" element={<Home />} />  {/* default route */}
       <Route path="/home2" element={<Home />} />
       <Route path="/about" element={<About />}>
         <Route path="man_Tshirt" element={<MAN_TSHIRT />} />
         <Route path="man_trouzer" element={<Man_trouzer />} />
       </Route>
+      <Route path="/courses" element={<Courses />} />
+      <Route path="/courses/:id" element={<Courses_details />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="*" element={<Notfound />} />
     </Routes>
