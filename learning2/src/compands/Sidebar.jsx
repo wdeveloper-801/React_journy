@@ -14,7 +14,7 @@ const Sidebar = () => {
 
         }
         {Sidebar &&
-            <div className="w-50 h-screen mt-16 bg-gray-600 text-white fixed top-0 left-0 ">
+            <div className="w-50 h-screen mt-16 bg-cyan-700 text-white fixed top-0 left-0 border-2 border-white border-l-0">
                 <button onClick={sidebar_close} className="cursor-pointer m-4">  <TextAlignJustify />  </button>
                 <div className=" flex flex-col justify-center items-center gap-1">
                     <Link to="/page1">Card1</Link>
@@ -23,6 +23,8 @@ const Sidebar = () => {
                     <Link to="/page4">Form handling</Link>
                     <Link to="/page5">Use_effect</Link>
                     <Link to="/page6">UseRef</Link>
+                    <Link to="/page7">p2 to p1 data tranfer trick</Link>
+    
                 </div>
             </div>
         }
