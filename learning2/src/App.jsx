@@ -1,22 +1,28 @@
 import { useState, useEffect } from 'react'
-import './App.css'
 import Card from './compands/Card'
 import Card2 from './compands/Card2';
 import Counter from './compands/Counter';
 import Fornhanding_with_tow_way_data_bending from './compands/Fornhanding_with_tow_way_data_bending';
 import Useeffect from './compands/Useeffect';
-import Useref from './compands/useref';
 import Useref2 from './compands/Useref2';
-// import Useref from './compands/Useref';
+import Useref from './compands/Useref';
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Nav from './pages/Nav';
+import Notfound from './pages/Notfound';
+import MAN_TSHIRT from './pages/MAN_TSHIRT';
+import Man_trouzer from './pages/Man_trouzer';
 
 
 
 
 function App() {
-  useEffect(() => {
-    alert('welcome to my page')
-    console.log('welcome to my page')
-  }, [])
+  // useEffect(() => {
+  //   alert('welcome to my page')
+  //   console.log('welcome to my page')
+  // }, [])
 
 
   const users = [
@@ -82,8 +88,8 @@ function App() {
     },
   ];
   return (<>
-    {/* 
-    <Counter />
+    <Nav />
+    {/* <Counter /> 
     <div className='flex flex-wrap justify-center'>
       {users.map((c, index) => {
         return (
@@ -95,14 +101,24 @@ function App() {
           />
         )
       })}
-    </div>
-    <Card2 />
+    </div> */}
+    {/* <Card2 />
   <Fornhanding_with_tow_way_data_bending /> */}
 
     <Useeffect />
     <Useref />
     <Useref2 />
 
+    <Routes>
+    <Route path="/" element={<Home />} />  {/* default route */}
+      <Route path="/home2" element={<Home />} />
+      <Route path="/about" element={<About />}>
+        <Route path="man_Tshirt" element={<MAN_TSHIRT />} />
+        <Route path="man_trouzer" element={<Man_trouzer />} />
+      </Route>
+      <Route path="/contact" element={<Contact />} />
+      <Route path="*" element={<Notfound />} />
+    </Routes>
 
   </>
   )
