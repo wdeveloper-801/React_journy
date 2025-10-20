@@ -1,8 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import { Bookmark } from 'lucide-react';
-const Card2 = () => {
-
+const Page2 = () => {
 
 
     const [Pic, setPic] = useState([])
@@ -32,7 +31,7 @@ const Card2 = () => {
         <>
             <div className="flex flex-wrap justify-center gap-4 p-4">
                 {Pic.map(({ title, first, last, age, img }, index) => (
-                    <div 
+                    <div
                         key={index}
                         className="w-90  bg-gray-600 rounded-lg m-4 flex flex-col items-center p-6 border-2 border-amber-50 hover:scale-110 transition duration-500 ease-in-out "    >
                         <img src={img} alt={`${first} ${last}`} className="w-32 h-32 rounded-full object-cover" />
@@ -41,7 +40,7 @@ const Card2 = () => {
                         <button className="bg-white p-2 mt-4 mb-4 text-black rounded-lg cursor-pointer active:scale-90">
                             View Profile
                         </button>
-                   
+
                         <Bookmark size={16} color="#ffffff" strokeWidth={1} />
                     </div>
                 ))}
@@ -50,4 +49,4 @@ const Card2 = () => {
     )
 }
 
-export default Card2
+export default Page2

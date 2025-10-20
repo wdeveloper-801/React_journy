@@ -4,7 +4,7 @@ const Useeffect = () => {
     const [first, setfirst] = useState(0)
     const [seound, setSeound] = useState(100)
     const [Color, setColor] = useState("red")
-    function one(params) {
+    function one() {
         setfirst(first + 1)
     }
     let two = () => {
@@ -25,7 +25,7 @@ const Useeffect = () => {
     return (
         <>
             <div className='flex mt-8 flex-col items-center'>
-                <h1 className='text-3xl'>useEffect</h1>
+                <h1 className='text-3xl mt-8'>useEffect</h1>
                 <h1 className='text-3xl mt-4'>{first}</h1>
                 <h1 className='text-3xl mt-4'>{seound}</h1>
                 <button onClick={one} className='w-24 h-12 bg-blue-500 text-white rounded-2xl mt-4 cursor-pointer transition-transform duration-150 active:scale-75'>increase</button>

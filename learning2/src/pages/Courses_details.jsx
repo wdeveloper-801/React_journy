@@ -7,7 +7,7 @@ const Courses_details = () => {
     
     return (
         <div>
-            <h1 className="text-4xl text-center font-bold underline mt-4 mb-12">{parma.id} Courses_details</h1>
+            <h1 className="text-4xl text-center font-bold underline mt-18">{parma.id} Courses_details</h1>
         </div>
     )
 }
