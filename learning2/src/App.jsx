@@ -19,10 +19,10 @@ import Man_trouzer from './pages/Man_trouzer';
 
 
 function App() {
-  // useEffect(() => {
-  //   alert('welcome to my page')
-  //   console.log('welcome to my page')
-  // }, [])
+   useEffect(() => {
+     alert('welcome to my page')
+     console.log('welcome to my page')
+   }, [])
 
 
   const users = [
