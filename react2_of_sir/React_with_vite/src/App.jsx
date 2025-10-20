@@ -27,6 +27,7 @@ function App() {
 
 
     <StudentList />
+    <h1 ></h1>
    
     
 
