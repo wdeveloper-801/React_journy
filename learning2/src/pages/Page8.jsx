@@ -10,8 +10,7 @@ const Page8 = () => {
             <img
                 src={img}
                 alt="User"
-                className="w-64 h-64 rounded-full object-cover border-4 border-white"
-            />
+                className="w-64 h-64 rounded-full object-cover border-4 border-white"/>
         </div>
     )
 }

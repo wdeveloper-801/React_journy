@@ -17,8 +17,10 @@ import Page4 from './pages/Page4';
 import Page5 from './pages/Page5';
 import Page6 from './pages/Page6';
 import Page7 from './pages/Page7';
-import { toast ,Flip} from 'react-toastify';
+import { toast, Flip } from 'react-toastify';
 import Page8 from './pages/Page8';
+import Useeffect from './compands/Useeffect'
+
 
 
 
@@ -50,7 +52,7 @@ function App() {
       </Route>
       <Route path="/courses" element={<Courses />} />
       <Route path="/courses/:id" element={<Courses_details />} />
-      <Route path="/contact" element={<Contact />} />
+      <Route path="/contact" element={<Useeffect />} />
       <Route path="/page1" element={<Page1 />} />
       <Route path="/page2" element={<Page2 />} />
       <Route path="/page3" element={<Page3 />} />
@@ -59,6 +61,7 @@ function App() {
       <Route path="/page6" element={<Page6 />} />
       <Route path="/page7" element={<Page7 />} />
       <Route path="/page/card_inner_view" element={<Page8 />} />
+
       <Route path="*" element={<Notfound />} />
     </Routes>
 

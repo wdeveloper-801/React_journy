@@ -10,7 +10,7 @@ const Sidebar = () => {
     return (<>
 
         {!Sidebar &&
-            <button className=" ml-4  mt-20" onClick={sidebar_open} ><TextAlignJustify /></button>
+            <button className=" ml-4   mt-20" onClick={sidebar_open} ><TextAlignJustify /></button>
 
         }
         {Sidebar &&
@@ -23,7 +23,7 @@ const Sidebar = () => {
                     <Link to="/page4">Form handling</Link>
                     <Link to="/page5">Use_effect</Link>
                     <Link to="/page6">UseRef</Link>
-                    <Link to="/page7">p2 to p1 data tranfer trick</Link>
+                    <Link to="/page7"> Lifting State Up method</Link>
     
                 </div>
             </div>

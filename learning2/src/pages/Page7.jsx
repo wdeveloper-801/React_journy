@@ -1,9 +1,9 @@
 import React from 'react'
-import { P1 } from '../praties/P1'
+import Lifting_state_up_parent from '../praties/lifting state up parent'
 
 const Page7 = () => {
     return (
-        <P1 />
+        <Lifting_state_up_parent />
     )
 }
 

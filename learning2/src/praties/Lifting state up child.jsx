@@ -1,8 +1,8 @@
 import React from 'react'
 
-const P2 = (props) => {
+const Lifting_state_up_child = ({setTheme}) => {
     let changetheme = () => {
-        props.setTheme("red")
+        setTheme("red")
     }
     return (
         <div>
@@ -13,4 +13,4 @@ const P2 = (props) => {
     )
 }
 
-export default P2 
+export default Lifting_state_up_child 
