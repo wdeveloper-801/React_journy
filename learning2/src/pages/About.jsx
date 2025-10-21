@@ -1,8 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link, Outlet } from 'react-router-dom'
+import { toast } from 'react-toastify'
 
 const About = () => {
-  
+  useEffect(()=>{
+    toast.success('Welcome to the about page!', {
+      position: 'top-right',
+      autoClose: 10000,})
+},[])
+
     return (
         <div className="flex flex-col items-center ">
             <div>

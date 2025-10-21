@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -17,14 +17,24 @@ import Page4 from './pages/Page4';
 import Page5 from './pages/Page5';
 import Page6 from './pages/Page6';
 import Page7 from './pages/Page7';
-
+import { toast ,Flip} from 'react-toastify';
+import Page8 from './pages/Page8';
 
 
 
 function App() {
   useEffect(() => {
-    alert('welcome to my page')
-    console.log('welcome to my page')
+    toast.success('Welcome to my website.', {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: false,
+      draggable: false,
+      theme: "dark",
+      transition: Flip,
+    });
+
   }, [])
 
 
@@ -48,8 +58,10 @@ function App() {
       <Route path="/page5" element={<Page5 />} />
       <Route path="/page6" element={<Page6 />} />
       <Route path="/page7" element={<Page7 />} />
+      <Route path="/page/card_inner_view" element={<Page8 />} />
       <Route path="*" element={<Notfound />} />
     </Routes>
+
   </>
   )
 }

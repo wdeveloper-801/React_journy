@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import { Bookmark } from 'lucide-react';
+import { Link } from 'react-router-dom';
 const Page2 = () => {
 
 
@@ -27,6 +28,7 @@ const Page2 = () => {
         api();
     }, []);
 
+
     return (
         <>
             <div className="flex flex-wrap justify-center gap-4 p-4">
@@ -38,9 +40,8 @@ const Page2 = () => {
                         <h2 className="mt-4 text-2xl text-white w-11/12">{`Name: ${title} ${first} ${last}`}</h2>
                         <p className="mt-2 text-white">Age: {age}</p>
                         <button className="bg-white p-2 mt-4 mb-4 text-black rounded-lg cursor-pointer active:scale-90">
-                            View Profile
+                            <Link to="/page/card_inner_view" state={{ img }} > View More</Link>
                         </button>
-
                         <Bookmark size={16} color="#ffffff" strokeWidth={1} />
                     </div>
                 ))}
