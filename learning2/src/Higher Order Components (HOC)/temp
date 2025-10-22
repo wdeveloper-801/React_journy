@@ -1,0 +1,113 @@
+import {
+  createBrowserRouter,
+  Navigate,
+  RouterProvider,
+} from "react-router-dom";
+import React, { useEffect } from "react";
+
+import AdminLayout from "./Layout/AdminLayout/Layout";
+import AdminDashboard from "./pages/AdminPages/AdminDashboard";
+import Staff from "./pages/AdminPages/CampusManagement";
+import Students from "./pages/AdminPages/Students";
+import Departments from "./pages/AdminPages/Departments";
+import Configuration from "./pages/AdminPages/Configuration";
+import Settings from "./pages/AdminPages/Settings";
+import Login from "./pages/AdminPages/Login";
+import AdminQueryTable from "./pages/AdminPages/AdminQueryTable";
+import HRM from "./pages/AdminPages/HRM";
+import index from "./pages/AdminPages/index";
+import BusManagementSystem from "./pages/AdminPages/BusManagementSystem";
+import CampusManagement from "./pages/AdminPages/CampusManagement";
+import SectionsDashboard from "./pages/AdminPages/SectionsDashboard";
+import ProgramsDashboard from "./pages/AdminPages/ProgramsDashboard";
+import ClassesDashboard from "./pages/AdminPages/ClassesDashboard";
+import SessionsDashboard from "./pages/AdminPages/SessionsDashboard";
+import AttendanceSystem from "./pages/AdminPages/AttendanceSystem";
+// Teacher pages
+
+//  HR pages
+// import { AuthProvider } from './components/cammonFiles/AuthContext';
+// import { AppProvider } from './components/HR/AppContext';
+
+const router = createBrowserRouter([
+  // Root and Login Routes
+  {
+    path: "/",
+    element: <Login />,
+  },
+
+  // Admin Routes
+  {
+    path: "/admin",
+    element: <AdminLayout />,
+    children: [
+      {
+        path: "dashboard",
+        element: <AdminDashboard />,
+      },
+      {
+        path: "CampusManagement",
+        element: <CampusManagement />,
+      },
+      {
+        path: "students",
+        element: <Students />,
+      },
+      {
+        path: "departments",
+        element: <Departments />,
+      },
+      {
+        path: "HRM",
+        element: <HRM />,
+      },
+      {
+        path: "BusManagementSystem",
+        element: <BusManagementSystem />,
+      },
+      {
+        path: "Configuration",
+        element: <Configuration />,
+      },
+      {
+        path: "queries",
+        element: <AdminQueryTable />,
+      },
+      {
+        path: "settings",
+        element: <Settings />,
+      },
+      {
+        path: "ProgramsDashboard",
+        element: <ProgramsDashboard />,
+      },
+      {
+        path: "SectionsDashboard",
+        element: <SectionsDashboard />,
+      },
+      {
+        path: "ClassesDashboard",
+        element: <ClassesDashboard />,
+      },
+      {
+        path: "SessionsDashboard",
+        element: <SessionsDashboard />,
+      },
+      {
+        path: "AttendanceSystem" ,
+        element: <AttendanceSystem />,
+      }
+    ],
+  },
+
+  // Teacher Routes
+
+  //     {
+  //   path: '*',
+  //   element: <Navigate to="/" replace />,
+  // },
+]);
+
+export default function App() {
+  return <RouterProvider router={router} />;
+}
