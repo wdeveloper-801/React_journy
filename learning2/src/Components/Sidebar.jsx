@@ -26,8 +26,9 @@ const Sidebar = () => {
                     <Link to="/page7"> Lifting State Up method</Link>
                     <Link to="/page9/controlled_input"> controlled_input</Link>
                     <Link to="/page10/uncontrolled_input"> un_controlled_input</Link>
+                    <Link to="./page10/Higher Order Components (HOC)"> Higher Order Components (HOC)</Link>
 
-    
+
                 </div>
             </div>
         }
