@@ -22,6 +22,7 @@ import Useeffect from './Components/Useeffect'
 import Page9 from './pages/Page9';
 import Page10 from './pages/Page10';
 import Page11 from './pages/Page11';
+import Page12 from './pages/page12';
 
 
 
@@ -66,7 +67,8 @@ function App() {
       <Route path="/page/card_inner_view" element={<Page8 />} />
       <Route path="/page9/controlled_input" element={<Page9 />} />
       <Route path="/page10/uncontrolled_input" element={<Page10 />} />
-      <Route path="/page10/Higher Order Components (HOC)" element={<Page11 />} />
+      <Route path="/page11/Higher Order Components (HOC)" element={<Page11 />} />
+      <Route path="/page12/RenderPropsPattern" element={<Page12 />} />
 
       <Route path="*" element={<Notfound />} />
     </Routes>
