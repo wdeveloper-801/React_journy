@@ -1,5 +1,5 @@
 import React from 'react'
-import Card from '../compands/Card'
+import Card from '../Components/Card'
 
 const Page1 = () => {
 

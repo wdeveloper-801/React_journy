@@ -1,6 +1,6 @@
 import React from 'react'
-import Useref from '../compands/Useref'
-import Useref2 from '../compands/Useref2'
+import Useref from '../Components/Useref'
+import Useref2 from '../Components/Useref2'
 
 const Page6 = () => {
     return (

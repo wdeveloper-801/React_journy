@@ -2,14 +2,13 @@ import { useState, useEffect, useContext } from 'react'
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
-import Contact from './pages/Contact';
-import Nav from './compands/Nav';
+import Nav from './Components/Nav';
 import Notfound from './pages/Notfound';
 import MAN_TSHIRT from './pages/MAN_TSHIRT';
 import Man_trouzer from './pages/Man_trouzer';
 import Courses from './pages/Courses';
 import Courses_details from './pages/Courses_details';
-import Sidebar from './compands/Sidebar';
+import Sidebar from './Components/Sidebar';
 import Page1 from './pages/page1';
 import Page2 from './pages/Page2';
 import Page3 from './pages/Page3';
@@ -19,7 +18,7 @@ import Page6 from './pages/Page6';
 import Page7 from './pages/Page7';
 import { toast, Flip } from 'react-toastify';
 import Page8 from './pages/Page8';
-import Useeffect from './compands/Useeffect'
+import Useeffect from './Components/Useeffect'
 import Page9 from './pages/Page9';
 import Page10 from './pages/Page10';
 

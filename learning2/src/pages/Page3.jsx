@@ -1,5 +1,5 @@
 import React from 'react'
-import Counter from '../compands/Counter'
+import Counter from '../Components/Counter'
 
 const Page3 = () => {
   return (
