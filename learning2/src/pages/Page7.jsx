@@ -1,5 +1,5 @@
 import React from 'react'
-import Lifting_state_up_parent from '../praties/lifting state up parent'
+import Lifting_state_up_parent from '../lifiting state up/lifting state up parent'
 
 const Page7 = () => {
     return (

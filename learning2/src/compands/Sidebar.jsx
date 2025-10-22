@@ -24,6 +24,9 @@ const Sidebar = () => {
                     <Link to="/page5">Use_effect</Link>
                     <Link to="/page6">UseRef</Link>
                     <Link to="/page7"> Lifting State Up method</Link>
+                    <Link to="/page9/controlled_input"> controlled_input</Link>
+                    <Link to="/page10/uncontrolled_input"> un_controlled_input</Link>
+
     
                 </div>
             </div>
