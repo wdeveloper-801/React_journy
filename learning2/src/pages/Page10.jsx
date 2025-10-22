@@ -1,10 +1,11 @@
 import React from 'react'
-import Un_controlled from '../compands/Contolled vs uncontrolled from/un_controlled'
+import UnControlled from '../Contolled vs uncontrolled from/un_controlled'
+
 
 const Page10 = () => {
   return (
     <>
-      <Un_controlled />
+      <UnControlled/>
     </>
   )
 }

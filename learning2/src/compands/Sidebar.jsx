@@ -10,7 +10,7 @@ const Sidebar = () => {
     return (<>
 
         {!Sidebar &&
-            <button className=" ml-4   mt-20" onClick={sidebar_open} ><TextAlignJustify /></button>
+            <button className=" ml-4   mt-20  cursor-pointer" onClick={sidebar_open} ><TextAlignJustify /></button>
 
         }
         {Sidebar &&

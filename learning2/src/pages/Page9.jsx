@@ -1,5 +1,6 @@
 import React from 'react'
-import Controlled from '../compands/Contolled vs uncontrolled from/controlled'
+import Controlled from '../Contolled vs uncontrolled from/controlled'
+
 
 const Page9 = () => {
   return (
