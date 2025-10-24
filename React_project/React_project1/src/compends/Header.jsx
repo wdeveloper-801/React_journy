@@ -17,7 +17,7 @@ const Header = () => {
         {/* div2 */}
         <div id='links' className='flex gap-4 items-center'>
           <Link to="/">Home</Link>
-          <Link to="/">The brand</Link>
+          <Link to="/the_brand">The brand</Link>
           <Link to="/">All Products</Link>
           <div className='flex'>
             <Link to="/">All Chappals </Link>
