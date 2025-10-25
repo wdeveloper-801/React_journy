@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <>
             {/* main div */}
-            <div className='bg-gray-300  w-full h-140 flex justify-center items-center flex-col'>
+            <div className='bg-gray-300  w-full h-100 flex justify-center items-center flex-col'>
 
                 {/* div inner */}
                 <div className=' h-full flex justify-center  w-11/12'>
