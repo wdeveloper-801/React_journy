@@ -1,6 +1,8 @@
 
 import React, { useState } from 'react'
 import Card1 from './Card1'
+import Card2 from './Card2'
+
 
 const Home = () => {
 
@@ -11,7 +13,7 @@ const Home = () => {
     <div className='w-full h-auto'>
 
       {/* box1 */}
-      <div className='h-120'>
+      <div className='h-140'>
         {/* img div */}
         <div className="imgbox h-11/12">
           <img className='w-full h-full' src="//www.peshawarichappals.pk/cdn/shop/files/kaptan_chappal_Final.jpg?v=1761156471&width=2000" alt="" />
@@ -48,6 +50,8 @@ const Home = () => {
           <p className='mt-10'>PeshawariChappals.pk is Pakistan’s trusted source for original handmade Peshawari chappals, proudly preserving this timeless craft since 2010. Each pair is crafted with premium leather and traditional stitching, reflecting generations of artisan expertise. Our brand stands for quality, heritage, and affordability—offering unmatched comfort and durability. Explore our signature Norozi, Kaptaan, and classic styles, along with new seasonal arrivals that blend tradition with modern flair. From everyday wear to special occasions.</p>
         </div>
       </div>
+      <Card2/>
+ 
 
     </div >
   </>
