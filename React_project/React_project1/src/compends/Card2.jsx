@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Card2 = () => {
 
@@ -145,6 +146,10 @@ const Card2 = () => {
                             </div>
                         </div>
                     ))}
+                </div>
+                <div className="btn w-full h-20 flex justify-center items-center mt-15 ">
+                    {/* <Link to="/more items"><button className='w-30 h-13 text-white bg-black cursor-pointer active:scale-90 rounded-4xl'>Load more</button></Link> */}
+                    <a href="/more items"><button className='w-30 h-13 text-white bg-black cursor-pointer active:scale-90 rounded-4xl'>Load more</button></a>
                 </div>
             </div>
 
