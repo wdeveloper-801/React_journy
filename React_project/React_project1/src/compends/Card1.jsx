@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { useNavigate } from 'react-router-dom';
 
 const Card1 = () => {
   const data = [
@@ -25,9 +26,17 @@ const Card1 = () => {
   const nextSlide = () => {
     setIndex(prev => (prev === data.length - 1 ? 0 : prev + 1));
   };
+  const navigate = useNavigate();
+
+
+
+  const handleCardClick = (item, i) => {
+    navigate(`/detail/${i}`, { state: item });
+  };
+
 
   return (
-    <div className="relative w-full h-[400px] bg-purple-500 flex items-center justify-center overflow-hidden">
+    <div className="relative w-full h-[400px]  flex items-center justify-center overflow-hidden">
       {/* Prev Button */}
       <button
         onClick={prevSlide}
@@ -36,22 +45,14 @@ const Card1 = () => {
         <ChevronLeft color="#ffffff" />
       </button>
 
+
       {/* Cards */}
       <div className="w-[800px] h-80 flex items-center justify-center">
         <div className="flex gap-4">
           {data.concat(data).slice(index, index + 8).map((item, i) => (
-            <div
-              key={i}
-              className="w-64 h-80 bg-white shadow-md rounded-lg p-2 flex flex-col items-center justify-center transition-all duration-300"
-            >
-              <img
-                src={item.url}
-                alt={item.name}
-                className="w-full h-48 object-cover rounded-md"
-              />
-              <p className="mt-2 font-semibold text-center hover:underline cursor-pointer">
-                {item.name}
-              </p>
+            <div key={i} className="w-64 h-80 bg-white shadow-md rounded-lg p-2 flex flex-col items-center justify-center transition-all duration-300 cursor-pointer hover:scale-105 " onClick={() => handleCardClick(item, i)}>
+              <img src={item.url} alt={item.name} className="w-full h-48 object-cover rounded-md" />
+              <p className="mt-2 font-semibold text-center hover:underline cursor-pointer">   {item.name}   </p>
             </div>
           ))}
         </div>
