@@ -4,6 +4,7 @@ import Card1 from './Card1'
 import Card2 from './Card2'
 import Box4 from './box4'
 import Box5 from './Box5'
+import Card4 from './Card4'
 
 
 const Home = () => {
@@ -22,9 +23,9 @@ const Home = () => {
         </div>
       </div>
 
-        <Card1 />
+      <Card1 />
 
-        
+
       <div className="box3 h-80 bg-gray-100 w-full flex justify-center items-center mt-2 mb-2">
         <div className='teexter  w-2/3 h-full '>
           <h1 className='text-4xl text-center font-bold mt-4 mb-4'>Discover Pakistan’s Widest Range of Handmade Peshawari Chappals</h1>
@@ -35,6 +36,7 @@ const Home = () => {
       <Box4 />
       <Box5 />
       <Card1 />
+      <Card4 />
 
     </div >
   </>
