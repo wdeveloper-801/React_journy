@@ -1,25 +1,43 @@
 import { Minus, Plus } from 'lucide-react'
 import React, { useContext, useState } from 'react'
-import { useLocation, useNavigate } from 'react-router-dom'
-import { CartContext } from "../../Context/CartContext";
+import { useLocation } from 'react-router-dom'
+import { CartContext } from "../Context/Cartnumicrease";
 
 
 
 
-const Card_details_of_1_Card = () => {
-    const { addToCart } = useContext(CartContext);
 
+const Carddetails_of_inner_Card = () => {
+    const { cartCount, setCartCount, cartItems, setCartItems } = useContext(CartContext);
+
+
+   
+    const addToCart = () => {
+        // 1️⃣ increase count
+        setCartCount(cartCount + 1);
+
+        // 2️⃣ add product to cartItems
+        const product = {
+            id: state.id,
+            name: state.name,
+            price: state.price,
+            img: state.url,
+            quantity: 1
+        };
+
+        setCartItems([...cartItems, product]);
+    };
+
+    
     const { state } = useLocation()
-
-
     const [first, setfirst] = useState(0)
+
 
     let up = () => {
         setfirst(first + 1)
     }
     let down = () => {
         setfirst(down => {
-            // Decrease by 1, but never go below 0
             const newValue = down - 1;
             return newValue < 0 ? 0 : newValue;
         });
@@ -69,24 +87,7 @@ const Card_details_of_1_Card = () => {
                                 <button className=' cursor-pointer ' onClick={up}> <Plus className='ml-3' color="#000000" strokeWidth={0.75} /></button>
                             </div>
 
-                            <button
-                                className='w-full h-12 rounded-3xl bg-black text-white mt-5 cursor-pointer active:scale-90'
-                                onClick={() => {
-                                    if (first > 0) {
-                                        const product = {
-                                            id: Date.now(), // unique ID
-                                            name: state.name,
-                                            price: state.price,
-                                            image: state.url,
-                                            quantity: first,
-                                        };
-
-                                        addToCart(product);
-                                        alert(`${first} item(s) added to cart!`);
-                                    } else {
-                                        alert('Please select at least 1 quantity.');
-                                    }
-                                }}>   Add Cart </button>
+                            <button className='w-full h-12 rounded-3xl bg-black text-white mt-5 cursor-pointer active:scale-90' onClick={addToCart} >   Add Cart </button>
 
 
                             <h1 className='text-3xl font-bold mt-10'>Product Description</h1>
@@ -183,4 +184,4 @@ const Card_details_of_1_Card = () => {
     )
 }
 
-export default Card_details_of_1_Card
+export default Carddetails_of_inner_Card

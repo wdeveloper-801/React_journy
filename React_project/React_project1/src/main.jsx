@@ -6,8 +6,9 @@ import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } 
 import Home from './compends/Home/Home.jsx'
 import The_brand from './compends/The Brand/The brand.jsx'
 import Card3 from './compends/Home/Card3.jsx'
-import Card_details_of_1_Card from './compends/Home/Carddetails_of1Card.jsx'
-import { CartProvider } from "./Context/CartContext.jsx";
+import Card_details_of_1_Card from './compends/Home/Carddetails_of_inner_Card.jsx'
+import Cartnumicrease from './compends/Context/Cartnumicrease.jsx'
+
 
 const router = createBrowserRouter(
     createRoutesFromElements(
@@ -22,7 +23,8 @@ const router = createBrowserRouter(
     )
 )
 createRoot(document.getElementById('root')).render(
-    <CartProvider>
+
+    <Cartnumicrease>
     <RouterProvider router={router} />
-    </CartProvider>
+    </Cartnumicrease>
 )
