@@ -20,8 +20,10 @@ const Card_details_of_1_Card = () => {
 
     return (
         <>
+            {/* main div */}
             <div>
 
+                {/* order div */}
 
                 <div className='w-full h-screen flex justify-end items-end '>
                     <div className=' w-2/3 h-full  flex justify-end items-end'>
@@ -37,6 +39,9 @@ const Card_details_of_1_Card = () => {
                                 <h1 className='text-3xl  ml-5 '> RS:{state.price}</h1>
                             </div>
                             <hr className='mt-5 mb-3 bg-black w-full' />
+
+
+
                             <p className='text-2xl capitalize'>shoes size: {state.shoes_size}</p>
                             <select id="shoes" name="shoes_size" class="w-1/2 h-10  border border-gray-300 rounded-3xl text-center mt-5 bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
                                 <option value="US 8 / EU 41 / UK 7">US 8 / EU 41 / UK 7</option>
@@ -64,7 +69,12 @@ const Card_details_of_1_Card = () => {
                         </div>
                     </div>
                 </div>
-                  <hr className=' mt-8 w-full bg-black' />
+
+                {/* hr */}
+                <hr className=' mt-8 w-full bg-black' />
+
+                {/* reviews div */}
+
                 <div className='w-full mt-5 min-h-screen  flex flex-col items-center '>
 
                     <div className='mt-5 h-full w-11/12 pb-3  flex items-center flex-col'>
