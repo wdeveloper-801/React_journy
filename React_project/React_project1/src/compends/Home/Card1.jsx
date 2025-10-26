@@ -5,19 +5,87 @@ import { useNavigate } from 'react-router-dom';
 const Card1 = () => {
 
 
-  const data = [
-    { name: "Image 1", url: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=500&q=60" },
-    { name: "Image 2", url: "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=500&q=60" },
-    { name: "Image 3", url: "https://images.unsplash.com/photo-1516117172878-fd2c41f4a759?auto=format&fit=crop&w=500&q=60" },
-    { name: "Image 4", url: "https://images.unsplash.com/photo-1521747116042-5a810fda9664?auto=format&fit=crop&w=500&q=60" },
-    { name: "Image 5", url: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=500&q=60" },
-    { name: "Image 6", url: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=500&q=60" },
-    { name: "Image 7", url: "https://images.unsplash.com/photo-1495567720989-cebdbdd97913?auto=format&fit=crop&w=500&q=60" },
-    { name: "Image 8", url: "https://images.unsplash.com/photo-1473187983305-f615310e7daa?auto=format&fit=crop&w=500&q=60" },
-    { name: "Image 9", url: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=500&q=60" },
-    { name: "Image 10", url: "https://images.unsplash.com/photo-1481277542470-605612bd2d61?auto=format&fit=crop&w=500&q=60" },
-    { name: "Image 11", url: "https://images.unsplash.com/photo-1521747116042-5a810fda9664?auto=format&fit=crop&w=500&q=60" }
-  ];
+let data = [
+  {
+    id: 1,
+    name: "Nike Air Zoom Pegasus 40",
+    url: "https://images.unsplash.com/photo-1528701800489-20be9c72d1b8?auto=format&fit=crop&w=500&q=60",
+    price: 1200,
+    shoes_size: "US 13 / EU 46 / UK 12.5"
+  },
+  {
+    id: 2,
+    name: "Adidas Ultraboost 22",
+    url: "https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&w=500&q=60",
+    price: 1300,
+    shoes_size: "US 12 / EU 45 / UK 11.5"
+  },
+  {
+    id: 3,
+    name: "Puma RS-X Reinvention",
+    url: "https://images.unsplash.com/photo-1556906781-9a412961c28c?auto=format&fit=crop&w=500&q=60",
+    price: 1400,
+    shoes_size: "US 11 / EU 44 / UK 10.5"
+  },
+  {
+    id: 4,
+    name: "Reebok Classic Leather",
+    url: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=500&q=60",
+    price: 1500,
+    shoes_size: "US 10 / EU 43 / UK 9.5"
+  },
+  {
+    id: 5,
+    name: "New Balance 574 Core",
+    url: "https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=500&q=60",
+    price: 1600,
+    shoes_size: "US 9 / EU 42 / UK 8.5"
+  },
+  {
+    id: 6,
+    name: "Vans Old Skool",
+    url: "https://images.unsplash.com/photo-1589187155479-69a5f8c0f5d2?auto=format&fit=crop&w=500&q=60",
+    price: 1700,
+    shoes_size: "US 8 / EU 41 / UK 7.5"
+  },
+  {
+    id: 7,
+    name: "Converse Chuck Taylor All Star",
+    url: "https://images.unsplash.com/photo-1589187155479-69a5f8c0f5d2?auto=format&fit=crop&w=500&q=60",
+    price: 1800,
+    shoes_size: "US 8.5 / EU 42 / UK 8"
+  },
+  {
+    id: 8,
+    name: "Asics Gel-Kayano 30",
+    url: "https://images.unsplash.com/photo-1606813902779-9a4f09f82e97?auto=format&fit=crop&w=500&q=60",
+    price: 1900,
+    shoes_size: "US 9.5 / EU 43 / UK 8.5"
+  },
+  {
+    id: 9,
+    name: "Under Armour HOVR Phantom 2",
+    url: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=500&q=60",
+    price: 2000,
+    shoes_size: "US 10 / EU 44 / UK 9.5"
+  },
+  {
+    id: 10,
+    name: "Jordan Air 1 Retro High OG",
+    url: "https://images.unsplash.com/photo-1618354691417-1997f9c3b45b?auto=format&fit=crop&w=500&q=60",
+    price: 2100,
+    shoes_size: "US 11 / EU 45 / UK 10.5"
+  },
+  {
+    id: 11,
+    name: "Nike Air Force 1 ‘07",
+    url: "https://images.unsplash.com/photo-1618354691417-1997f9c3b45b?auto=format&fit=crop&w=500&q=60",
+    price: 2200,
+    shoes_size: "US 12 / EU 46 / UK 11.5"
+  }
+
+];
+
 
   const [index, setIndex] = useState(0);
 
@@ -69,6 +137,7 @@ const Card1 = () => {
               <div key={i}  className=" w-64 h-80 bg-white shadow-lg rounded-lg p-2 flex flex-col items-center justify-center transition-all duration-300 cursor-pointer hover:scale-105" onClick={() => handleCardClick(item, i)} >
                 <img src={item.url} alt={item.name} className="w-full h-48 object-cover rounded-md" />
                 <p className="mt-2 font-semibold text-center hover:underline cursor-pointer">{item.name}</p>
+                <p className="mt-2 font-semibold text-center hover:underline cursor-pointer">{item.price}</p>
               </div>
             ))}
           </div>
