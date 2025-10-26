@@ -51,7 +51,7 @@ const Carddetails_of_inner_Card = () => {
 
                 {/* order div */}
 
-                <div className='w-full h-screen flex justify-end items-end '>
+                <div className='w-full h-screen flex justify-end items-end mt-17 '>
                     <div className=' w-2/3 h-full  flex justify-end items-end'>
                         <div className=' w-11/12 mr-10 h-full '>
                             <img className='w-full h-full mt-2' src={state.url} alt="" />

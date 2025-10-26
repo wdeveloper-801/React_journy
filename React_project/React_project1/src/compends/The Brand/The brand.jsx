@@ -5,7 +5,7 @@ const The_brand = () => {
   return (
     <>
       {/* main div */}
-      <div className='flex justify-center flex-col items-center'>
+      <div className='flex justify-center flex-col items-center mt-16'>
 
         <div className='w-full h-screen flex items-center flex-col'>
           <h1 className='text-6xl mt-5 font-bold'>The brand</h1>

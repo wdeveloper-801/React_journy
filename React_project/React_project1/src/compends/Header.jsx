@@ -12,7 +12,7 @@ const Header = () => {
   return (
     <>
       {/* main header */}
-      <div className='w-full bg-white h-16 border-b-2 border-b-black flex items-center gap-4 justify-around'>
+      <div className='w-full bg-white h-16 border-b-2 border-b-black flex items-center gap-4 justify-around fixed top-0 z-50'>
 
         {/* div1 */}
         <div id='logo' className='w-60 h-10'>
