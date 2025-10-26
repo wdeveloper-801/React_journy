@@ -65,7 +65,7 @@ const Card4 = () => {
                 </div>
 
                 {/* Next Button */}
-                <button onClick={nextSlide}     >  <ChevronRight color="#ffffff" />          </button>
+                <button className="bg-black w-12 h-10 rounded-full flex justify-center items-center cursor-pointer absolute right-4 z-10 hover:scale-110 transition-transform"     onClick={nextSlide}><ChevronRight color="#ffffff" /></button>
             </div>
         </>
     );
