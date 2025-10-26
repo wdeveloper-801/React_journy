@@ -16,9 +16,7 @@ const router = createBrowserRouter(
             <Route path='/more items' element={<Card3 />} />
             <Route path="/detail/:id" element={<Card_details_of_1_Card />} />
 
-            {/* <Route path='/contact' element={<Contact />} />
-            <Route path='/user/:id' element={<User />} />
-            <Route path='/github' element={<Github />} /> */}
+          
         </Route>
     )
 )

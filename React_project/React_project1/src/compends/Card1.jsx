@@ -36,36 +36,56 @@ const Card1 = () => {
 
 
   return (
-    <div className="relative w-full h-[400px]  flex items-center justify-center overflow-hidden">
-      {/* Prev Button */}
-      <button
-        onClick={prevSlide}
-        className="bg-black w-12 h-10 rounded-full flex justify-center items-center cursor-pointer absolute left-4 z-10"
-      >
-        <ChevronLeft color="#ffffff" />
-      </button>
 
+    <>
 
-      {/* Cards */}
-      <div className="w-[800px] h-80 flex items-center justify-center">
-        <div className="flex gap-4">
-          {data.concat(data).slice(index, index + 8).map((item, i) => (
-            <div key={i} className="w-64 h-80 bg-white shadow-md rounded-lg p-2 flex flex-col items-center justify-center transition-all duration-300 cursor-pointer hover:scale-105 " onClick={() => handleCardClick(item, i)}>
-              <img src={item.url} alt={item.name} className="w-full h-48 object-cover rounded-md" />
-              <p className="mt-2 font-semibold text-center hover:underline cursor-pointer">   {item.name}   </p>
-            </div>
-          ))}
+      {/* inner box1 */}
+      <div className="innertext1 h-15 w-full  flex items-center gap-4 justify-around mt-5">
+
+        <div className="text1">
+          <h1 className='font-bold text-3xl'>Our Bestsellers</h1>
         </div>
-      </div>
 
-      {/* Next Button */}
-      <button
-        onClick={nextSlide}
-        className="bg-black w-12 h-10 rounded-full flex justify-center items-center cursor-pointer absolute right-4 z-10"
-      >
-        <ChevronRight color="#ffffff" />
-      </button>
-    </div>
+        <div className="text2">
+          <p>Discover the latest trends in footwear. Elevate your style with our collection of <br /> fashionable and comfortable Peshawari Chappals today!</p>
+        </div>
+
+        <div className="text3">
+          <button className='w-30 h-13 text-white bg-black cursor-pointer active:scale-90 rounded-4xl'>View more</button>
+        </div>
+
+      </div>
+      <div className="relative w-full h-[400px]  flex items-center justify-center overflow-hidden">
+        {/* Prev Button */}
+        <button
+          onClick={prevSlide}
+          className="bg-black w-12 h-10 rounded-full flex justify-center items-center cursor-pointer absolute left-4 z-10"
+        >
+          <ChevronLeft color="#ffffff" />
+        </button>
+
+
+        {/* Cards */}
+        <div className="w-[800px] h-80 flex items-center justify-center">
+          <div className="flex gap-4">
+            {data.concat(data).slice(index, index + 8).map((item, i) => (
+              <div key={i} className="w-64 h-80 bg-white shadow-md rounded-lg p-2 flex flex-col items-center justify-center transition-all duration-300 cursor-pointer hover:scale-105 " onClick={() => handleCardClick(item, i)}>
+                <img src={item.url} alt={item.name} className="w-full h-48 object-cover rounded-md" />
+                <p className="mt-2 font-semibold text-center hover:underline cursor-pointer">   {item.name}   </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Next Button */}
+        <button
+          onClick={nextSlide}
+          className="bg-black w-12 h-10 rounded-full flex justify-center items-center cursor-pointer absolute right-4 z-10"
+        >
+          <ChevronRight color="#ffffff" />
+        </button>
+      </div>
+    </>
   );
 };
 
