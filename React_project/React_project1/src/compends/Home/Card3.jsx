@@ -190,7 +190,6 @@ const Card3 = () => {
               <div key={item.id} className='w-80 h-90 mt-2 bg-gray-300  shadow-md hover:scale-105 transition-transform duration-300'>
                 <img src={item.url} className='h-60 w-full object-cover ' alt={item.name} onClick={() => handleCardClick(item)} />
                 <div className="text h-40 flex justify-center items-center flex-col gap-2  " onClick={() => handleCardClick(item)}>
-                  <p className='font-semibold'>ID: {item.id}</p>
                   <p className='capitalize text-lg'>{item.name}</p>
                   <p className='font-bold pb-10'>{item.price}</p>
                 </div>
