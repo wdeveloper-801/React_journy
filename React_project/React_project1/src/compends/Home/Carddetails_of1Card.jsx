@@ -1,11 +1,17 @@
 import { Minus, Plus } from 'lucide-react'
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
+import { CartContext } from "../../Context/CartContext";
+
+
+
 
 const Card_details_of_1_Card = () => {
+    const { addToCart } = useContext(CartContext);
+
     const { state } = useLocation()
     const navigate = useNavigate()
-    
+
     const [first, setfirst] = useState(0)
 
     let up = () => {
@@ -63,7 +69,14 @@ const Card_details_of_1_Card = () => {
                                 <button className=' cursor-pointer ' onClick={down}>  <Minus color="#000000" strokeWidth={0.75} className='mr-3' />                 </button>
                             </div>
 
-                            <button className='w-full h-12 rounded-3xl bg-black text-white mt-5 cursor-pointer active:scale-90'>Add Cart</button>
+                            <button className='w-full h-12 rounded-3xl bg-black text-white mt-5 cursor-pointer active:scale-90' onClick={() => {
+                                if (first > 0) {
+                                    addToCart(first); // add the selected quantity
+                                    alert(`${first} item(s) added to cart!`);
+                                } else {
+                                    alert('Please select at least 1 quantity.');
+                                }
+                            }}>Add Cart</button>
 
                             <h1 className='text-3xl font-bold mt-10'>Product Description</h1>
                             <h2 className='mt-3 text-2xl font-bold '>etc.. {state.ProductDescription}</h2>

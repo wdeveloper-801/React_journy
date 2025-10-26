@@ -1,12 +1,14 @@
 
 import { ArrowRight, ChevronDown, ShoppingCart } from 'lucide-react'
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { CartContext } from '../Context/CartContext'
 const Header = () => {
   const [first, setfirst] = useState(1)
+  const { cartCount } = useContext(CartContext);
   return (
     <>
-    {/* main header */}
+      {/* main header */}
       <div className='w-full bg-white h-16 border-b-2 border-b-black flex  items-center gap-4 justify-around'>
 
         {/* div1 */}
@@ -38,7 +40,7 @@ const Header = () => {
         {/* div4 */}
         <div className='flex'>
           <button className='cursor-pointer'><ShoppingCart color="#000000" /></button>
-          <p>({first})</p>
+          <p>{cartCount}</p>
         </div>
 
       </div>
