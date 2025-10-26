@@ -5,7 +5,9 @@ import { useLocation, useNavigate } from 'react-router-dom'
 const Card_details_of_1_Card = () => {
     const { state } = useLocation()
     const navigate = useNavigate()
+    
     const [first, setfirst] = useState(0)
+
     let up = () => {
         setfirst(first + 1)
     }

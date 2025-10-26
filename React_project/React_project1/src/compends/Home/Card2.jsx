@@ -149,6 +149,7 @@ const Card2 = () => {
     const navigate = useNavigate();
     const handleCardClick = (item,) => {
         navigate(`/detail/${item.id}`, { state: item });
+        
     };
 
     return (

@@ -157,6 +157,7 @@ const Card3 = () => {
   let navigate = useNavigate()
   const handleCardClick = (item) => {
     navigate(`/detail/${item.id}`, { state: item });
+    
   };
 
   return (
