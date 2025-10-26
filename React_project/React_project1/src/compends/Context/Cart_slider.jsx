@@ -3,7 +3,7 @@ import React, { useContext } from 'react'
 import { CartContext } from './Cartnumicrease';
 
 const Cart_slider = () => {
-    const { cartCount, cartItems, isCartOpen, setIsCartOpen } = useContext(CartContext);
+    const {  cartItems, isCartOpen, setIsCartOpen } = useContext(CartContext);
 
     return (
         <>

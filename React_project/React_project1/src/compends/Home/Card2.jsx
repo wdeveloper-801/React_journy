@@ -155,8 +155,8 @@ const Card2 = () => {
     return (
         <>
             <div className='min-h-560 w-full'>
-                <div className="text flex justify-center items-center h-10">
-                    <h1 className='text-4xl font-bold underline'>New Arrivals</h1>
+                <div className="text flex justify-center items-center h-20">
+                    <h1 className='text-4xl font-bold underline '>New Arrivals</h1>
                 </div>
 
                 <div className="card w-full h-full flex flex-wrap justify-center items-start  bg-amber-0500 gap-x-15 gap-y-15">
