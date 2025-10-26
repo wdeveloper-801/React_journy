@@ -10,7 +10,7 @@ const Card_details_of_1_Card = () => {
     const { addToCart } = useContext(CartContext);
 
     const { state } = useLocation()
-    const navigate = useNavigate()
+
 
     const [first, setfirst] = useState(0)
 
@@ -64,19 +64,30 @@ const Card_details_of_1_Card = () => {
                             <h5 className='mt-5'>Quantity</h5>
 
                             <div className='flex justify-center items-center h-10 w-full border-2'>
-                                <button className=' cursor-pointer ' onClick={up}> <Plus className='ml-3' color="#000000" strokeWidth={0.75} /></button>
-                                <p className='w-11/12 text-center'>{first}</p>
                                 <button className=' cursor-pointer ' onClick={down}>  <Minus color="#000000" strokeWidth={0.75} className='mr-3' />                 </button>
+                                <p className='w-11/12 text-center'>{first}</p>
+                                <button className=' cursor-pointer ' onClick={up}> <Plus className='ml-3' color="#000000" strokeWidth={0.75} /></button>
                             </div>
 
-                            <button className='w-full h-12 rounded-3xl bg-black text-white mt-5 cursor-pointer active:scale-90' onClick={() => {
-                                if (first > 0) {
-                                    addToCart(first); // add the selected quantity
-                                    alert(`${first} item(s) added to cart!`);
-                                } else {
-                                    alert('Please select at least 1 quantity.');
-                                }
-                            }}>Add Cart</button>
+                            <button
+                                className='w-full h-12 rounded-3xl bg-black text-white mt-5 cursor-pointer active:scale-90'
+                                onClick={() => {
+                                    if (first > 0) {
+                                        const product = {
+                                            id: Date.now(), // unique ID
+                                            name: state.name,
+                                            price: state.price,
+                                            image: state.url,
+                                            quantity: first,
+                                        };
+
+                                        addToCart(product);
+                                        alert(`${first} item(s) added to cart!`);
+                                    } else {
+                                        alert('Please select at least 1 quantity.');
+                                    }
+                                }}>   Add Cart </button>
+
 
                             <h1 className='text-3xl font-bold mt-10'>Product Description</h1>
                             <h2 className='mt-3 text-2xl font-bold '>etc.. {state.ProductDescription}</h2>
