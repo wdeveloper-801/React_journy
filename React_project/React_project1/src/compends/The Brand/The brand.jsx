@@ -125,7 +125,7 @@ const The_brand = () => {
           <h1 className='text-4xl font-bold text-center mt-5 mb-10'>Recognition by International Journals</h1>
           <div className='w-11/12 h-90  flex'>
             <div className='w-1/2 h-80'>
-              <video className='w-full h-full' autoPlay controls src="https://www.peshawarichappals.pk/cdn/shop/videos/c/vp/fcfa1c85c6594f94a1b334d5fd5a417f/fcfa1c85c6594f94a1b334d5fd5a417f.HD-720p-1.6Mbps-56716844.mp4?v=0"></video>
+              <video className='w-full h-full' muted autoPlay controls src="https://www.peshawarichappals.pk/cdn/shop/videos/c/vp/fcfa1c85c6594f94a1b334d5fd5a417f/fcfa1c85c6594f94a1b334d5fd5a417f.HD-720p-1.6Mbps-56716844.mp4?v=0"></video>
             </div>
             <div className='w-full h-full flex  items-center  flex-col'>
               <h1 className='text-3xl mt-10'>Acknowledgement by Team BBC Urdu</h1>
