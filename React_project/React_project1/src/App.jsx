@@ -4,10 +4,12 @@ import { Outlet } from 'react-router-dom'
 import Footer from './compends/Footer.jsx'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import ScrollToTop from './ScrollToTop.jsx';
 const App = () => {
   return (
     <>
       <div>
+        <ScrollToTop />
         <Header />
         <Outlet />
         <Footer />
