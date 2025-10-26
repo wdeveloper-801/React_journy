@@ -156,7 +156,7 @@ const Card3 = () => {
 
   let navigate = useNavigate()
   const handleCardClick = (item, i) => {
-    navigate(`/detail/${i}`, { state: item });
+    navigate(`/detail/${item.id}`, { state: item });
   };
 
   return (
@@ -180,8 +180,8 @@ const Card3 = () => {
 
         <div className='min-h-560  border-t-2  border-black w-full flex'>
           {/* in this box why height full not apply */}
-          <div className='w-80 ml-3  h-140 mt-17 bg-blue-500'>
-            <p>cll</p>
+          <div className='w-80 ml-3  h-140 mt-17 '>
+            <p></p>
           </div>
 
           <div className="card w-9/12 h-full flex flex-wrap justify-center items-start  gap-x-15 gap-y-15 mt-15 cursor-pointer" onClick={() => handleCardClick(item)}>
