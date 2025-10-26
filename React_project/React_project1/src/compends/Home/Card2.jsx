@@ -9,129 +9,138 @@ const Card2 = () => {
             id: 1,
             name: "nikitA",
             url: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=500&q=60",
-            price: 1200
+            price: 1200,
+            shoes_size: "US 13 / EU 46 / UK 12.5"
         },
         {
             id: 2,
             name: "nikitA",
             url: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=500&q=60",
-            price: 1100
+            price: 1100,
+            shoes_size: "US 13 / EU 46 / UK 12.5"
         },
         {
             id: 3,
             name: "nikitA",
             url: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=500&q=60",
-            price: 1300
+            price: 1300,
+            shoes_size: "US 13 / EU 46 / UK 12.5"
+
         },
         {
             id: 4,
             name: "nikitA",
             url: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=500&q=60",
-            price: 1400
+            price: 1400,
+            shoes_size: "US 13 / EU 46 / UK 12.5"
         },
         {
             id: 5,
             name: "nikitA",
             url: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=500&q=60",
-            price: 1500
+            price: 1500,
+            shoes_size: "US 13 / EU 46 / UK 12.5"
         },
         {
             id: 6,
             name: "nikitA",
             url: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=500&q=60",
-            price: 1600
+            price: 1600,
+            shoes_size: "US 13 / EU 46 / UK 12.5"
 
         },
         {
             id: 7,
             name: "nikitA",
             url: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=500&q=60",
-            price: 1700
+            price: 1700,
+            shoes_size: "US 13 / EU 46 / UK 12.5"
         },
         {
             id: 8,
             name: "nikitA",
             url: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=500&q=60",
-            price: 1800
+            price: 1800,
+            shoes_size: "US 13 / EU 46 / UK 12.5"
 
         },
         {
             id: 9,
             name: "nikitA",
             url: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=500&q=60",
-            price: 1900
+            price: 1900, shoes_size: "US 13 / EU 46 / UK 12.5"
         },
         {
             id: 10,
             name: "nikitA",
             url: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=500&q=60",
-            price: 2000
+            price: 2000, shoes_size: "US 13 / EU 46 / UK 12.5"
         },
         {
             id: 11,
             name: "nikitA",
             url: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=500&q=60",
-            price: 2100
+            price: 2100, shoes_size: "US 13 / EU 46 / UK 12.5"
         },
         {
             id: 12,
             name: "nikitA",
             url: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=500&q=60",
-            price: 2200
+            price: 2200, shoes_size: "US 13 / EU 46 / UK 12.5"
         },
         {
             id: 13,
             name: "nikitA",
             url: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=500&q=60",
-            price: 2300
+            price: 2300, shoes_size: "US 13 / EU 46 / UK 12.5"
         },
         {
             id: 14,
             name: "nikitA",
             url: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=500&q=60",
-            price: 2400
+            price: 2400, shoes_size: "US 13 / EU 46 / UK 12.5"
         },
         {
             id: 15,
             name: "nikitA",
             url: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=500&q=60",
-            price: 2500
+            price: 2500, shoes_size: "US 13 / EU 46 / UK 12.5"
         }, {
             id: 16,
             name: "nikitA",
             url: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=500&q=60",
-            price: 2600
+            price: 2600, shoes_size: "US 13 / EU 46 / UK 12.5"
 
         }, {
             id: 17,
             name: "nikitA",
             url: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=500&q=60",
-            price: 2700
+            price: 2700, shoes_size: "US 13 / EU 46 / UK 12.5"
 
         }, {
             id: 18,
             name: "nikitA",
             url: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=500&q=60",
-            price: 2800
+            price: 2800, shoes_size: "US 13 / EU 46 / UK 12.5"
         },
         {
             id: 19,
             name: "nikitA",
             url: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=500&q=60",
-            price: 2900
+            price: 2900, shoes_size: "US 13 / EU 46 / UK 12.5"
 
         },
         {
             id: 20,
             name: "nikitA",
             url: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=500&q=60",
-            price: 3000
+            price: 3000, shoes_size: "US 13 / EU 46 / UK 12.5"
         }
     ]
 
     const navigate = useNavigate();
-    const handleCardClick = (item, i) => {
-        navigate(`/detail/${i}`, { state: item });
+    const handleCardClick = (item,) => {
+        navigate(`/detail/${item.id}`, { state: item });
     };
 
     return (
