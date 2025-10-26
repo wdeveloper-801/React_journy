@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const Card2 = () => {
 
@@ -128,6 +128,12 @@ const Card2 = () => {
             price: 3000
         }
     ]
+
+    const navigate = useNavigate();
+    const handleCardClick = (item, i) => {
+        navigate(`/detail/${i}`, { state: item });
+    };
+
     return (
         <>
             <div className='min-h-560 w-full'>
@@ -137,9 +143,9 @@ const Card2 = () => {
 
                 <div className="card w-full h-full flex flex-wrap justify-center items-start  bg-amber-0500 gap-x-15 gap-y-15">
                     {data.map((item) => (
-                        <div key={item.id} className='w-80 h-90 mt-2 bg-blue-500  shadow-md hover:scale-105 transition-transform duration-300'>
-                            <img src={item.url} className='h-60 w-full object-cover ' alt={item.name} />
-                            <div className="text h-40 bg-green-400 flex justify-center items-center flex-col gap-2 ">
+                        <div key={item.id} className='w-80 h-90 mt-2 bg-blue-500  shadow-md hover:scale-105 transition-transform duration-300' >
+                            <img onClick={() => handleCardClick(item)} src={item.url} className='h-60 w-full object-cover ' alt={item.name} />
+                            <div className="text h-40 bg-green-400 flex justify-center items-center flex-col gap-2 " onClick={() => handleCardClick(item)}>
                                 <p className='font-semibold'>ID: {item.id}</p>
                                 <p className='capitalize text-lg'>{item.name}</p>
                                 <p className='font-bold'>{item.price}</p>

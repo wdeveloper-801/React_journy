@@ -30,11 +30,11 @@ const Card1 = () => {
   };
   const navigate = useNavigate();
 
-
-
   const handleCardClick = (item, i) => {
     navigate(`/detail/${i}`, { state: item });
   };
+
+
 
   return (
 

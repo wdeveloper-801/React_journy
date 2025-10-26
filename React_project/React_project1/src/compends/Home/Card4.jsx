@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+
 
 const Card4 = () => {
     const data = [
@@ -17,7 +17,7 @@ const Card4 = () => {
         { name: "hassan", url: "https://images.unsplash.com/photo-1521747116042-5a810fda9664?auto=format&fit=crop&w=500&q=60", p: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod." }
     ];
 
-    const navigate = useNavigate();
+
     const [index, setIndex] = useState(0);
 
     const prevSlide = () => {
@@ -28,9 +28,7 @@ const Card4 = () => {
         setIndex((prev) => (prev === data.length - 1 ? 0 : prev + 1));
     };
 
-    const handleCardClick = (item, i) => {
-        navigate(`/detail/${i}`, { state: item });
-    };
+  
 
     return (
         <>
