@@ -15,7 +15,7 @@ const Cart_slider = () => {
                     <button className="cursor-pointer" onClick={() => setIsCartOpen(false)}>✖️</button>
                 </div>
 
-                <div>
+                <div className='flex items-center flex-col'>
                     {cartItems.length === 0 ? (
                         <p className='p-4'>Your cart is empty!</p>)
                         :
@@ -30,6 +30,7 @@ const Cart_slider = () => {
                             </div>
                         ))
                         )}
+                    <button className='w-11/12 h-10 bg-black text-white cursor-pointer active:scale-90 fixed bottom-10'>checkout</button>
                 </div>
             </div>
         </>
