@@ -25,8 +25,8 @@ const Card_details_of_1_Card = () => {
 
                 <div className='w-full h-screen flex justify-end items-end '>
                     <div className=' w-2/3 h-full  flex justify-end items-end'>
-                        <div className=' w-3/4 h-full'>
-                            <img className='w-full h-full' src={state.url} alt="" />
+                        <div className=' w-11/12 mr-10 h-full '>
+                            <img className='w-full h-full mt-2' src={state.url} alt="" />
                         </div>
                     </div>
                     <div className='w-1/3 min-h-screen  h-overflox-school flex items-center  flex-col'>
@@ -64,7 +64,84 @@ const Card_details_of_1_Card = () => {
                         </div>
                     </div>
                 </div>
-                    <div className='w-full mt-5 h-screen bg-green-500'></div>
+                  <hr className=' mt-8 w-full bg-black' />
+                <div className='w-full mt-5 min-h-screen  flex flex-col items-center '>
+
+                    <div className='mt-5 h-full w-11/12 pb-3  flex items-center flex-col'>
+
+                        <h1 className='text-4xl font-black mt-4 mb-4'>What Our Customers Say</h1>
+
+                        <div className='flex justify-between items-center w-2/5 mt-10'>
+                            <div className='flex '>
+                                <img className='w-10 h-10 rounded-full' src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-webinar-optimizing-for-success-google-business-webinar-13.png" alt="" />
+                                <div className='flex flex-col'>
+                                    <h1>Peshawari Chappal Pakistan</h1>
+                                    <p>  <span>4.6</span>  ⭐⭐⭐⭐ 311 Google Reviews  </p>
+                                </div>
+                            </div>
+                            <button className='bg-blue-500 w-30 h-13 rounded-4xl text-white '>Write Review</button>
+                        </div>
+
+                        <div className='w-140 h-30 mt-5 border-2 border-gray-200 rounded-2xl'>
+                            <div className='w-full flex justify-between  h-2/5  '>
+
+                                <div className='flex items-center'>
+                                    <img className='w-10 h-10 rounded-full m-4 ' src={state.url} alt="" />
+                                    <h2 className=''>{state.name}</h2>
+                                </div>
+
+                                <p className='mr-2 mt-2'>⭐⭐⭐⭐</p>
+                            </div>
+
+                            <p className='ml-5 mt-2'>good</p>
+
+                        </div>
+                        <div className='w-140 h-30 mt-5 border-2 border-gray-200 rounded-2xl'>
+                            <div className='w-full flex justify-between  h-2/5  '>
+
+                                <div className='flex items-center'>
+                                    <img className='w-10 h-10 rounded-full m-4 ' src={state.url} alt="" />
+                                    <h2 className=''>{state.name}</h2>
+                                </div>
+
+                                <p className='mr-2 mt-2'>⭐⭐⭐⭐</p>
+                            </div>
+
+                            <p className='ml-5 mt-2'>good</p>
+
+                        </div>
+                        <div className='w-140 h-30 mt-5 border-2 border-gray-200 rounded-2xl'>
+                            <div className='w-full flex justify-between  h-2/5  '>
+
+                                <div className='flex items-center'>
+                                    <img className='w-10 h-10 rounded-full m-4 ' src={state.url} alt="" />
+                                    <h2 className=''>{state.name}</h2>
+                                </div>
+
+                                <p className='mr-2 mt-2'>⭐⭐⭐⭐</p>
+                            </div>
+
+                            <p className='ml-5 mt-2'>good</p>
+
+                        </div>
+                        <div className='w-140 h-30 mt-5 border-2 border-gray-200 rounded-2xl'>
+                            <div className='w-full flex justify-between  h-2/5  '>
+
+                                <div className='flex items-center'>
+                                    <img className='w-10 h-10 rounded-full m-4 ' src={state.url} alt="" />
+                                    <h2 className=''>{state.name}</h2>
+                                </div>
+
+                                <p className='mr-2 mt-2'>⭐⭐⭐⭐</p>
+                            </div>
+
+                            <p className='ml-5 mt-2'>good</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
             </div>
         </>
     )
