@@ -37,8 +37,10 @@ const Carddetails_of_inner_Card = () => {
             quantity: 1
         };
 
-        setCartItems([...cartItems, product]);
-        setBillpage([...billpage, product]);
+       
+        setCartItems(cartItems.concat(product));
+        setBillpage(billpage.concat(product));
+
 
     };
 
