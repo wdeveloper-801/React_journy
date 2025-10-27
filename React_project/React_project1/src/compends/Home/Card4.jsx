@@ -48,7 +48,7 @@ const Card4 = () => {
 
                 {/* Cards Container */}
                 <div className="w-full h-100 overflow-hidden relative pt-10">
-                    <div className="flex transition-transform duration-700 ease-in-out" style={{ transform: `translateX(-${index * 270}px)`, }} >
+                    <div className="flex transition-transform duration-700 ease-in-out" style={{ transform: `translateX(-${index * 155}px)`, }} >
                         {data.map((item, i) => (
                             <div key={i} className="min-w-[250px] h-80 bg-white shadow-md rounded-lg p-2 flex flex-col transition-all duration-300 cursor-pointer hover:scale-105 border-2 mx-2" onClick={() => handleCardClick(item, i)}  >
                                 <p>⭐⭐⭐⭐⭐</p>
