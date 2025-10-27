@@ -13,7 +13,7 @@ const Header = () => {
   return (
     <>
       {/* main header */}
-      <div className='w-full bg-white h-auto  border-b-2 border-b-black flex items-center gap-4  fixed top-0 z-50 overflow-hidden lg:justify-between xl:justify-between 2xl:justify-between '>
+      <div className='w-full bg-white h-auto  border-b-2 border-b-black flex items-center gap-4   justify-between fixed top-0 z-50 overflow-hidden  '>
 
         {/* div1 */}
         <div id='logo' className='w-60 h-10 hidden  lg:block xl:block 2xl:block'>
@@ -60,7 +60,7 @@ const Header = () => {
       </div>
 
       {/* Mobile menu (with animation) */}
-      <div className={`absolute top-5 left-0 w-full bg-white border-t border-gray-300 flex flex-col items-start gap-3 px-4 py-3 lg:hidden z-40 transition-all duration-300 ease-in-out ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-5 pointer-events-none"}`} >
+      <div className={` top-5 left-0 w-full bg-white border-t border-b border-gray-500 flex flex-col items-start gap-3 px-4 py-3 lg:hidden z-40 transition-all duration-300 ease-in-out fixed ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-5 pointer-events-none"}`} >
         <Link to="/" onClick={() => setMenuOpen(false)}> Home</Link>
         <Link to="/the_brand" onClick={() => setMenuOpen(false)}>  The brand</Link>
         <Link to="/" onClick={() => setMenuOpen(false)}>  All Products</Link>

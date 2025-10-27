@@ -26,11 +26,11 @@ const The_brand = () => {
 
 
         {/* box2 */}
-        <div className='w-full h-auto flex justify-center pb-20 '>
+        <div className='w-full h-auto flex items-center justify-center pb-20 flex-col mt-10 lg:m-0 xl:m-0 2xl:m-0 lg:flex-row xl:flex-row 2xl:flex-row lg:items-start xl:items-start 2xl:items-start '>
           <div className='w-1/3 h-full mb-10'>
             <img className='w-full h-full' src="//www.peshawarichappals.pk/cdn/shop/files/7-6_ad535113-5f63-487a-83b9-079dcb0189f9.jpg?v=1757057651&width=800" alt="" />
           </div>
-          <div className='w-1/3 h-full  flex items-center flex-col'>
+          <div className='w-full h-full  flex items-center  flex-col lg:w-1/3 xl:w-1/3 2xl:w-1/3'>
             <h1 className='text-3xl font-bold'>We are proudly Pakistani</h1>
 
             <div className='flex w-5/6 justify-start mt-4 '>
@@ -73,14 +73,14 @@ const The_brand = () => {
         </div>
 
         {/* box3 */}
-        <div className='w-full min-h-screen flex flex-col items-center pb-5'>
+        <div className='w-full min-h-screen flex flex-col items-center  pb-5'>
 
           <h1 className='text-3xl font-bold mt-4'>Our Team</h1>
 
           {/* 1 */}
-          <div className='flex w-4/5 h-70 gap-4 justify-between mt-4'>
+          <div className='flex w-4/5 min-h-70 gap-4 items-center justify-center  flex-col  lg-flex-row xl:flex-row 2xl:flex-row lg:mb-0 xl:mb-0 2xl:mb-0'>
 
-            <div className='w-100 h-50'>
+            <div className='w-100 h-50 '>
               <div>
                 <img className='w-full h-full' src="https://www.peshawarichappals.pk/cdn/shop/files/ezgif.com-gif-maker-2.jpg?v=1756894944&width=1100" alt="" />
               </div>
@@ -122,8 +122,10 @@ const The_brand = () => {
             </div>
 
           </div>
-          <h1 className='text-4xl font-bold text-center mt-5 mb-10'>Recognition by International Journals</h1>
-          <div className='w-11/12 h-90  flex'>
+          <div className='w-11/12 min-h-90  flex flex-col items-center justify-center mt-20 '>
+            <div>
+              <h1 className='text-4xl font-bold text-center mt-5 mb-10'>Recognition by International Journals</h1>
+            </div>
             <div className='w-1/2 h-80'>
               <video className='w-full h-full' muted autoPlay controls src="https://www.peshawarichappals.pk/cdn/shop/videos/c/vp/fcfa1c85c6594f94a1b334d5fd5a417f/fcfa1c85c6594f94a1b334d5fd5a417f.HD-720p-1.6Mbps-56716844.mp4?v=0"></video>
             </div>
