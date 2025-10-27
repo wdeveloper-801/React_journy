@@ -3,7 +3,7 @@ import React from 'react'
 const Box5 = () => {
     return (
         <>
-            <div className='h-screen bg-gray-300 w-full flex  '>
+            <div className='min-h-auto pb-10 pt-10 bg-gray-300 w-full flex flex-col justify-center items-center md:flex-row lg-flex-row xl:flex-row 2xl:flex-row   '>
                 {/* TEXT */}
                 <div className='h-full w-1/2 flex items-center justify-center  '>
                     <div className='text w-11/12 '>
@@ -16,7 +16,7 @@ const Box5 = () => {
 
                 
                 {/* IMAGE */}
-                <div className='h-full w-1/2 flex justify-center items-center '>
+                <div className='mt-5 h-full w-1/2 flex justify-center items-center '>
                     <div className='w-11/12 h-full'>
                         <img src="https://www.peshawarichappals.pk/cdn/shop/files/764d5367-8901-4f58-96dc-933bbc69348d.jpg?v=1761156679&width=1500" className='w-full h-full object-cover' alt="" />
                     </div>

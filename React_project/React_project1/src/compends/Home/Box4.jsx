@@ -3,7 +3,7 @@ import React from 'react'
 const Box4 = () => {
     return (
         <>
-            <div className='h-screen bg-gray-300 w-full flex  '>
+            <div className='min-h-auto pb-10 pt-10 bg-gray-300 w-full flex flex-col justify-center items-center md:flex-row lg-flex-row xl:flex-row 2xl:flex-row  '>
 
                 {/* IMAGE */}
                 <div className='h-full w-1/2 flex justify-center items-center '>
@@ -16,7 +16,7 @@ const Box4 = () => {
                 <div className='h-full w-1/2 flex items-center  '>
                     <div className='text w-11/12 '>
                         <h3 className='font-bold text-2xl'>Norozi Chappal</h3>
-                        <h1 className='font-bold text-4xl mt-2'>PeshawariChappalsPK, Since - 2014</h1>
+                        <h1 className='font-bold text-2xl lg-4xl xl:4xl 2xl:4xl mt-2'>PeshawariChappalsPK, Since - 2014</h1>
                         <p className='mt-5'>We were born into a family of shoemaker artisans with more than four decades of history. It has helped us to improve more.</p>
                         <button className='border-2 rounded-3xl w-40 h-12 mt-5 cursor-pointer active:scale-90 '>View Collection</button>
                     </div>

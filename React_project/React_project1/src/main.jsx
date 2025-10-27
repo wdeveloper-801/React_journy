@@ -22,8 +22,6 @@ const router = createBrowserRouter(
             <Route path="/detail/:id" element={<Card_details_of_1_Card />} />
             <Route path='/address_confirm_page' element={<Addrespage />} />
             <Route path='/Order_confirm' element={<Your_order_is_place />} />
-
-
         </Route>
     )
 )

@@ -59,6 +59,7 @@ const Card2 = () => {
             url: "https://images.unsplash.com/photo-1606813902779-9a4f09f82e97?auto=format&fit=crop&w=500&q=60",
             price: 1900,
             shoes_size: "US 9.5 / EU 43 / UK 8.5"
+            
         },
         {
             id: 9,
@@ -161,7 +162,7 @@ const Card2 = () => {
 
                 <div className="card w-full h-full flex flex-wrap justify-center items-start  bg-amber-0500 gap-x-15 gap-y-15">
                     {data.map((item) => (
-                        <div key={item.id} className='w-80 h-90 mt-2  bg-gray-200 shadow-md hover:scale-105 transition-transform duration-300' >
+                        <div key={item.id} className='w-80 h-90 mt-2 md:max-w-50 sm:max-w-50 xl:max-w-80 lg:max-w-80 2xl:max-w-80 bg-gray-200 shadow-md hover:scale-105 transition-transform duration-300' >
                             <img onClick={() => handleCardClick(item)} src={item.url} className='h-60 w-full object-cover ' alt={item.name} />
                             <div className="text h-40  flex justify-center items-center flex-col gap-2 " onClick={() => handleCardClick(item)}>
                                 <p className='capitalize text-lg'>{item.name}</p>
