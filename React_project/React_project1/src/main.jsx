@@ -9,6 +9,8 @@ import Card3 from './compends/Home/Card3.jsx'
 import Card_details_of_1_Card from './compends/Home/Carddetails_of_inner_Card.jsx'
 import Cartnumicrease from './compends/Context/Cartnumicrease.jsx'
 import { ToastContainer } from 'react-toastify'
+import Addrespage from './Payment pages/addrespage.jsx'
+import Your_order_is_place from './Payment pages/Your_order_is_place.jsx'
 
 
 const router = createBrowserRouter(
@@ -18,6 +20,8 @@ const router = createBrowserRouter(
             <Route path='/the_brand' element={<The_brand />} />
             <Route path='/more items' element={<Card3 />} />
             <Route path="/detail/:id" element={<Card_details_of_1_Card />} />
+            <Route path='/address_confirm_page' element={<Addrespage />} />
+            <Route path='/Order_confirm' element={<Your_order_is_place />} />
 
 
         </Route>
@@ -26,7 +30,7 @@ const router = createBrowserRouter(
 createRoot(document.getElementById('root')).render(
 
     <Cartnumicrease>
-        <ToastContainer/>
+        <ToastContainer />
         <RouterProvider router={router} />
     </Cartnumicrease>
 )

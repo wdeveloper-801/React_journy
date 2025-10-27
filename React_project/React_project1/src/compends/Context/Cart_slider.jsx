@@ -1,9 +1,10 @@
 // Cart_slider.jsx
 import React, { useContext } from 'react'
 import { CartContext } from './Cartnumicrease';
+import { Link } from 'react-router-dom';
 
 const Cart_slider = () => {
-    const {  cartItems, isCartOpen, setIsCartOpen } = useContext(CartContext);
+    const { cartItems, isCartOpen, setIsCartOpen } = useContext(CartContext);
 
     return (
         <>
@@ -15,7 +16,7 @@ const Cart_slider = () => {
                     <button className="cursor-pointer" onClick={() => setIsCartOpen(false)}>✖️</button>
                 </div>
 
-                <div className='flex items-center flex-col'>
+                <div className='flex items-center flex-col h-full w-full '>
                     {cartItems.length === 0 ? (
                         <p className='p-4'>Your cart is empty!</p>)
                         :
@@ -30,7 +31,7 @@ const Cart_slider = () => {
                             </div>
                         ))
                         )}
-                    <button className='w-11/12 h-10 bg-black text-white cursor-pointer active:scale-90 fixed bottom-10'>checkout</button>
+                    <Link to="/address_confirm_page" className="w-11/12 h-10 bg-black text-white flex items-center justify-center fixed bottom-10">checkout</Link>
                 </div>
             </div>
         </>

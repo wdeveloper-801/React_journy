@@ -4,14 +4,26 @@ import { useLocation } from 'react-router-dom'
 import { CartContext } from "../Context/Cartnumicrease";
 
 
-
-
-
 const Carddetails_of_inner_Card = () => {
-    const { cartCount, setCartCount, cartItems, setCartItems } = useContext(CartContext);
+    const { cartCount, setCartCount, cartItems, setCartItems, setBillpage, billpage } = useContext(CartContext);
 
 
-   
+    const { state } = useLocation()
+    const [first, setfirst] = useState(0)
+
+
+    let up = () => {
+        setfirst(first + 1)
+    }
+    let down = () => {
+        setfirst(down => {
+            const newValue = down - 1;
+            return newValue < 0 ? 0 : newValue;
+        });
+    }
+
+
+
     const addToCart = () => {
         // 1️⃣ increase count
         setCartCount(cartCount + 1);
@@ -26,22 +38,9 @@ const Carddetails_of_inner_Card = () => {
         };
 
         setCartItems([...cartItems, product]);
+        setBillpage([...billpage, product]);
+
     };
-
-    
-    const { state } = useLocation()
-    const [first, setfirst] = useState(0)
-
-
-    let up = () => {
-        setfirst(first + 1)
-    }
-    let down = () => {
-        setfirst(down => {
-            const newValue = down - 1;
-            return newValue < 0 ? 0 : newValue;
-        });
-    }
 
 
     return (

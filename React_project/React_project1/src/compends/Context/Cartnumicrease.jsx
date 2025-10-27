@@ -6,6 +6,7 @@ const Cartnumicrease = ({ children }) => {
   const [cartCount, setCartCount] = useState(0);
   const [cartItems, setCartItems] = useState([]);
   const [isCartOpen, setIsCartOpen] = useState(false); // slider open/close
+  const [billpage, setBillpage] = useState([])
 
   return (
     <CartContext.Provider value={{
@@ -14,7 +15,9 @@ const Cartnumicrease = ({ children }) => {
       cartItems,
       setCartItems,
       isCartOpen,
-      setIsCartOpen
+      setIsCartOpen,
+      billpage,
+      setBillpage
     }}>
       {children}
     </CartContext.Provider>
