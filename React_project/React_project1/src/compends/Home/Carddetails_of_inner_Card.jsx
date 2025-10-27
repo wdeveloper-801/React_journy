@@ -5,7 +5,7 @@ import { CartContext } from "../Context/Cartnumicrease";
 
 
 const Carddetails_of_inner_Card = () => {
-    const { cartCount, setCartCount, cartItems, setCartItems, setBillpage, billpage } = useContext(CartContext);
+    const { cartCount, setCartCount, cartItems, setCartItems, setBillpage, billpage, Ordernum, setOrdernum } = useContext(CartContext);
 
 
     const { state } = useLocation()
@@ -22,6 +22,10 @@ const Carddetails_of_inner_Card = () => {
         });
     }
 
+    let up2 = () => {
+        setOrdernum(Ordernum + 1)
+    }
+
 
 
     const addToCart = () => {
@@ -36,7 +40,7 @@ const Carddetails_of_inner_Card = () => {
             img: state.url,
             quantity: 1
         };
-               
+
         setCartItems(cartItems.concat(product));
         setBillpage(billpage.concat(product));
     };
@@ -80,12 +84,12 @@ const Carddetails_of_inner_Card = () => {
                             <h5 className='mt-5'>Quantity</h5>
 
                             <div className='flex justify-center items-center h-10 w-full border-2'>
-                                <button className=' cursor-pointer ' onClick={down}>  <Minus color="#000000" strokeWidth={0.75} className='mr-3' />                 </button>
+                                <button className=' cursor-pointer ' onClick={down}>  <Minus color="#000000" strokeWidth={0.75} className='mr-3' />   </button>
                                 <p className='w-11/12 text-center'>{first}</p>
                                 <button className=' cursor-pointer ' onClick={up}> <Plus className='ml-3' color="#000000" strokeWidth={0.75} /></button>
                             </div>
 
-                            <button className='w-full h-12 rounded-3xl bg-black text-white mt-5 cursor-pointer active:scale-90' onClick={addToCart} >   Add Cart </button>
+                            <button className='w-full h-12 rounded-3xl bg-black text-white mt-5 cursor-pointer active:scale-90' onClick={() => { addToCart(), up2() }} >Add Cart </button>
 
 
                             <h1 className='text-3xl font-bold mt-10'>Product Description</h1>

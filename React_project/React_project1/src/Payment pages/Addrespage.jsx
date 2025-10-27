@@ -3,14 +3,13 @@ import { CartContext } from '../compends/Context/Cartnumicrease'
 import { Link } from 'react-router-dom';
 
 const Addrespage = () => {
-    const { billpage } = useContext(CartContext);
+    const { billpage,Ordernum } = useContext(CartContext);
 
     const [customer, setCustomer] = useState({
         name: "",
         address: "",
         phone: "",
     });
-
 
 
     const handleChange = (e) => {
@@ -33,47 +32,21 @@ const Addrespage = () => {
                     <div>
 
                         <div className="mb-4">
-                            <label className="block text-gray-700 font-semibold mb-2">
-                                Name
-                            </label>
-                            <input
-                                type="text"
-                                name="name"
-                                value={customer.name}
-                                onChange={handleChange}
-                                className="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-                                placeholder="Enter name"
-                            />
+                            <input type="text" name="name" value={customer.name} onChange={handleChange} className="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Enter name"/>
                         </div>
+
                         <div className="mb-4">
-                            <label className="block text-gray-700 font-semibold mb-2">
-                                Address
-                            </label>
-                            <input
-                                type="text"
-                                name="address"
-                                value={customer.address}
-                                onChange={handleChange}
-                                className="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-                                placeholder="Enter address"
-                            />
+                            <input type="text" name="address" value={customer.address} onChange={handleChange} className="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Enter address" />
                         </div>
+
                         <div className="mb-4">
-                            <label className="block text-gray-700 font-semibold mb-2">
-                                Phone
-                            </label>
-                            <input
-                                type="text"
-                                name="phone"
-                                value={customer.phone}
-                                onChange={handleChange}
-                                className="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-                                placeholder="Enter phone"
-                            />
+                            <input type="text" name="phone" value={customer.phone} onChange={handleChange} className="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Enter phone" />
                         </div>
+
                         {/* Previous Orders */}
                         <div className="w-4/5">
                             <h2 className="text-2xl font-semibold mb-4">Previous Orders</h2>
+                                <h2>Order Number #{Ordernum}</h2>
                             <div className="space-y-4 mb-2 ">
                                 {Array.isArray(billpage) && billpage.length > 0 ? (
                                     billpage.map((a, i) => (
@@ -82,7 +55,6 @@ const Addrespage = () => {
                                             <div className="flex-1">
                                                 <h3 className="text-lg font-semibold">{a.name}</h3>
                                                 <p className="text-gray-600">Price: {a.price}</p>
-                                              <p>Order Number #{Math.floor(Math.random() * 10000)}</p>
                                             </div>
                                         </div>
                                     ))) : (
