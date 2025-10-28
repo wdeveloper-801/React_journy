@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { CartContext } from '../Context/Cartnumicrease';
+import { CartContext } from '../Use context/Useconext1';
 
 const Card2 = () => {
     const { data,   setDdata } = useContext(CartContext);

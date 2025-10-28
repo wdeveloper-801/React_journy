@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { useNavigate } from 'react-router-dom';
-import { CartContext } from '../Context/Cartnumicrease';
+import { CartContext } from '../Use context/Useconext1';
 
 const Card1 = () => {
 

@@ -1,6 +1,6 @@
 // Cart_slider.jsx
 import React, { useContext } from 'react'
-import { CartContext } from './Cartnumicrease';
+import { CartContext } from '../Use context/Useconext1';
 import { Link } from 'react-router-dom';
 
 const Cart_slider = () => {

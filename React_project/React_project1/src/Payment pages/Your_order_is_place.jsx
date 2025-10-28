@@ -1,7 +1,7 @@
 
 import { Check } from "lucide-react";
 import React, { useContext, useEffect, useState } from "react";
-import { CartContext } from "../compends/Context/Cartnumicrease";
+import { CartContext } from "../compends/Use context/Useconext1";
 
 
 const Your_order_is_place = () => {

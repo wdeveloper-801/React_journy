@@ -1,10 +1,10 @@
 import { Minus, Plus } from 'lucide-react'
 import React, { useContext, useState } from 'react'
 import { useLocation } from 'react-router-dom'
-import { CartContext } from "../Context/Cartnumicrease";
+import { CartContext } from "../Use context/Useconext1";
 
 
-const Carddetails_of_inner_Card = () => {
+const Carddetails_of_inner_sidejsx = () => {
     const { cartCount, setCartCount, cartItems, setCartItems, setBillpage, billpage, } = useContext(CartContext);
     const { state } = useLocation()
 
@@ -154,4 +154,4 @@ const Carddetails_of_inner_Card = () => {
     )
 }
 
-export default Carddetails_of_inner_Card
+export default Carddetails_of_inner_sidejsx

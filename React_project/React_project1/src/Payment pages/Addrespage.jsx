@@ -1,9 +1,9 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { CartContext } from '../compends/Context/Cartnumicrease'
+import { CartContext } from '../compends/Use context/Useconext1'
 import { Link } from 'react-router-dom';
 
 const Addrespage = () => {
-    const { billpage,Ordernum,setIsCartOpen } = useContext(CartContext);
+    const { billpage, Ordernum, setIsCartOpen } = useContext(CartContext);
 
     const [customer, setCustomer] = useState({
         name: "",
@@ -21,9 +21,9 @@ const Addrespage = () => {
         console.log("Customer info submitted:", customer);
         // You can send this to backend or save
     };
-    
+
     useEffect(() => {
-    // Reset cart count
+        // Reset cart count
         setIsCartOpen(false);  // Close sidebar
     }, []);
 
@@ -37,7 +37,7 @@ const Addrespage = () => {
                     <div>
 
                         <div className="mb-4">
-                            <input type="text" name="name" value={customer.name} onChange={handleChange} className="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Enter name"/>
+                            <input type="text" name="name" value={customer.name} onChange={handleChange} className="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Enter name" />
                         </div>
 
                         <div className="mb-4">
@@ -50,8 +50,7 @@ const Addrespage = () => {
 
                         {/* Previous Orders */}
                         <div className="w-4/5">
-                            <h2 className="text-2xl font-semibold mb-4">Previous Orders</h2>
-                                <h2>Order Number #{Ordernum}</h2>
+                            <h2 className='text-2xl font-semibold mb-4'> Order Number #{Ordernum}</h2>
                             <div className="space-y-4 mb-2 ">
                                 {Array.isArray(billpage) && billpage.length > 0 ? (
                                     billpage.map((a, i) => (

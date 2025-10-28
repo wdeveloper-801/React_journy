@@ -2,7 +2,7 @@ import { ArrowRight, ChevronDown, ShoppingCart, Menu, X } from 'lucide-react'
 import { useContext, useState } from 'react'
 
 import { Link } from 'react-router-dom'
-import { CartContext } from './Context/Cartnumicrease'
+import { CartContext } from './Use context/Useconext1'
 
 
 const Header = () => {

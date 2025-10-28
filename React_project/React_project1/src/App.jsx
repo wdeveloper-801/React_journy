@@ -5,7 +5,7 @@ import Footer from './compends/Footer.jsx'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import ScrollToTop from './ScrollToTop.jsx';
-import Cart_slider from './compends/Context/Cart_slider.jsx';
+import Cart_slider from './compends/Use context/Cart_slider.jsx';
 import { toast } from 'react-toastify';
 const App = () => {
   useEffect(() => {

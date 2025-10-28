@@ -2,7 +2,7 @@ import React, { createContext, useState } from "react";
 
 export const CartContext = createContext();
 
-const Cartnumicrease = ({ children }) => {
+const Usecontext1 = ({ children }) => {
   const [cartCount, setCartCount] = useState(0);
   const [cartItems, setCartItems] = useState([]);
   const [isCartOpen, setIsCartOpen] = useState(false); // slider open/close
@@ -175,4 +175,4 @@ const Cartnumicrease = ({ children }) => {
   );
 };
 
-export default Cartnumicrease;
+export default Usecontext1;
