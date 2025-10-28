@@ -150,7 +150,6 @@ const Cartnumicrease = ({ children }) => {
     }
   ]);
 
-
   let random = Math.floor(Math.random() * 2000);
   const [Ordernum, setOrdernum] = useState(random)
 
