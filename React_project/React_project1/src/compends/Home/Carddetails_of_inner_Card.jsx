@@ -5,32 +5,25 @@ import { CartContext } from "../Context/Cartnumicrease";
 
 
 const Carddetails_of_inner_Card = () => {
-    const { cartCount, setCartCount, cartItems, setCartItems, setBillpage, billpage, Ordernum, setOrdernum } = useContext(CartContext);
-
-
+    const { cartCount, setCartCount, cartItems, setCartItems, setBillpage, billpage,  } = useContext(CartContext);
     const { state } = useLocation()
-    const [first, setfirst] = useState(0)
+
 
 
     let up = () => {
-        setfirst(first + 1)
+        setCartCount(cartCount + 1)
     }
     let down = () => {
-        setfirst(down => {
+        setCartCount(down => {
             const newValue = down - 1;
             return newValue < 0 ? 0 : newValue;
         });
     }
 
-    let up2 = () => {
-        setOrdernum(Ordernum + 1)
-    }
-
-
 
     const addToCart = () => {
         // 1️⃣ increase count
-        setCartCount(cartCount + 1);
+        setCartCount(cartCount);
 
         // 2️⃣ add product to cartItems
         const product = {
@@ -38,14 +31,27 @@ const Carddetails_of_inner_Card = () => {
             name: state.name,
             price: state.price,
             img: state.url,
-            quantity: 1
+            quantity: cartCount
         };
 
         setCartItems(cartItems.concat(product));
         setBillpage(billpage.concat(product));
+
     };
 
-
+    const data = [
+        { name: "kamran", url: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=500&q=60", p: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod." },
+        { name: "omer", url: "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=500&q=60", p: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod." },
+        { name: "zafir", url: "https://images.unsplash.com/photo-1516117172878-fd2c41f4a759?auto=format&fit=crop&w=500&q=60", p: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod." },
+        { name: "yasir", url: "https://images.unsplash.com/photo-1521747116042-5a810fda9664?auto=format&fit=crop&w=500&q=60", p: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod." },
+        { name: "nami", url: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=500&q=60", p: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod." },
+        { name: "ullo", url: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=500&q=60", p: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod." },
+        { name: "line", url: "https://images.unsplash.com/photo-1495567720989-cebdbdd97913?auto=format&fit=crop&w=500&q=60", p: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod." },
+        { name: "man", url: "https://images.unsplash.com/photo-1473187983305-f615310e7daa?auto=format&fit=crop&w=500&q=60", p: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod." },
+        { name: "iqbal", url: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=500&q=60", p: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod." },
+        { name: "salmal", url: "https://images.unsplash.com/photo-1481277542470-605612bd2d61?auto=format&fit=crop&w=500&q=60", p: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod." },
+        { name: "hassan", url: "https://images.unsplash.com/photo-1521747116042-5a810fda9664?auto=format&fit=crop&w=500&q=60", p: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod." }
+    ];
     return (
         <>
             {/* main div */}
@@ -59,7 +65,7 @@ const Carddetails_of_inner_Card = () => {
                             <img className='w-full h-full mt-2' src={state.url} alt="" />
                         </div>
                     </div>
-                    <div className='w-1/3 min-h-screen  h-overflox-school flex items-center  flex-col'>
+                    <div className='w-1/3 min-h-screen  overflow-y-auto flex items-center  flex-col'>
                         <div className='w-11/12 h-full flex flex-col mt-10'>
                             <h1 className='text-3xl font-bold '>{state.name}</h1>
                             <div className='flex mt-5  items-center' >
@@ -84,12 +90,16 @@ const Carddetails_of_inner_Card = () => {
                             <h5 className='mt-5'>Quantity</h5>
 
                             <div className='flex justify-center items-center h-10 w-full border-2'>
-                                <button className=' cursor-pointer ' onClick={down}>  <Minus color="#000000" strokeWidth={0.75} className='mr-3' />   </button>
-                                <p className='w-11/12 text-center'>{first}</p>
-                                <button className=' cursor-pointer ' onClick={up}> <Plus className='ml-3' color="#000000" strokeWidth={0.75} /></button>
+                                <button className=' cursor-pointer ' onClick={() => {
+                                    down(), down2()
+                                }}>  <Minus color="#000000" strokeWidth={0.75} className='mr-3' />   </button>
+                                <p className='w-11/12 text-center'>{cartCount}</p>
+                                <button className=' cursor-pointer ' onClick={() => {
+                                    up(), up2()
+                                }}> <Plus className='ml-3' color="#000000" strokeWidth={0.75} /></button>
                             </div>
 
-                            <button className='w-full h-12 rounded-3xl bg-black text-white mt-5 cursor-pointer active:scale-90' onClick={() => { addToCart(), up2() }} >Add Cart </button>
+                            <button className='w-full h-12 rounded-3xl bg-black text-white mt-5 cursor-pointer active:scale-90' onClick={() => { addToCart() }} >Add Cart </button>
 
 
                             <h1 className='text-3xl font-bold mt-10'>Product Description</h1>
@@ -106,7 +116,7 @@ const Carddetails_of_inner_Card = () => {
 
                 <div className='w-full mt-5 min-h-screen  flex flex-col items-center '>
 
-                    <div className='mt-5 h-full w-11/12 pb-3  flex items-center flex-col'>
+                    <div className='mt-5 h-full w-11/12 pb-3  flex items-center  flex-col'>
 
                         <h1 className='text-4xl font-black mt-4 mb-4'>What Our Customers Say</h1>
 
@@ -120,68 +130,26 @@ const Carddetails_of_inner_Card = () => {
                             </div>
                             <button className='bg-blue-500 w-30 h-13 rounded-4xl text-white '>Write Review</button>
                         </div>
+                        {data.map((a, i) => (
 
-                        <div className='w-140 h-30 mt-5 border-2 border-gray-200 rounded-2xl'>
-                            <div className='w-full flex justify-between  h-2/5  '>
-
-                                <div className='flex items-center'>
-                                    <img className='w-10 h-10 rounded-full m-4 ' src={state.url} alt="" />
-                                    <h2 className=''>{state.name}</h2>
+                            <div className='w-140 min-h-30 mt-5 border-2 border-gray-200 rounded-2xl'>
+                                <div key={i} className='w-full flex justify-between   border-gray-200  '>
+                                    <div className='flex items-center'>
+                                        <img className='w-10 h-10 rounded-full m-4' src={a.url} alt="pic" />
+                                        <h2>{a.name}</h2>
+                                        <div className='w-80 relative top-13 left-30   '>
+                                            <h2>{a.p}</h2>
+                                        </div>
+                                    </div>
+                                    <p className='mr-2 mt-2'>⭐⭐⭐⭐</p>
                                 </div>
-
-                                <p className='mr-2 mt-2'>⭐⭐⭐⭐</p>
                             </div>
-
-                            <p className='ml-5 mt-2'>good</p>
-
-                        </div>
-                        <div className='w-140 h-30 mt-5 border-2 border-gray-200 rounded-2xl'>
-                            <div className='w-full flex justify-between  h-2/5  '>
-
-                                <div className='flex items-center'>
-                                    <img className='w-10 h-10 rounded-full m-4 ' src={state.url} alt="" />
-                                    <h2 className=''>{state.name}</h2>
-                                </div>
-
-                                <p className='mr-2 mt-2'>⭐⭐⭐⭐</p>
-                            </div>
-
-                            <p className='ml-5 mt-2'>good</p>
-
-                        </div>
-                        <div className='w-140 h-30 mt-5 border-2 border-gray-200 rounded-2xl'>
-                            <div className='w-full flex justify-between  h-2/5  '>
-
-                                <div className='flex items-center'>
-                                    <img className='w-10 h-10 rounded-full m-4 ' src={state.url} alt="" />
-                                    <h2 className=''>{state.name}</h2>
-                                </div>
-
-                                <p className='mr-2 mt-2'>⭐⭐⭐⭐</p>
-                            </div>
-
-                            <p className='ml-5 mt-2'>good</p>
-
-                        </div>
-                        <div className='w-140 h-30 mt-5 border-2 border-gray-200 rounded-2xl'>
-                            <div className='w-full flex justify-between  h-2/5  '>
-
-                                <div className='flex items-center'>
-                                    <img className='w-10 h-10 rounded-full m-4 ' src={state.url} alt="" />
-                                    <h2 className=''>{state.name}</h2>
-                                </div>
-
-                                <p className='mr-2 mt-2'>⭐⭐⭐⭐</p>
-                            </div>
-
-                            <p className='ml-5 mt-2'>good</p>
-
-                        </div>
+                        ))}
 
                     </div>
 
                 </div>
-            </div>
+            </div >
         </>
     )
 }

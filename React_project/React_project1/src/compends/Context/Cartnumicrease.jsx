@@ -7,7 +7,6 @@ const Cartnumicrease = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
   const [isCartOpen, setIsCartOpen] = useState(false); // slider open/close
   const [billpage, setBillpage] = useState([])
-  
   const [data, setDdata] = useState([
     {
       id: 1,
@@ -151,7 +150,7 @@ const Cartnumicrease = ({ children }) => {
     }
   ]);
 
-  let random = Math.floor(Math.random() * 2000) ;
+  let random = Math.floor(Math.random() * 2000);
   const [Ordernum, setOrdernum] = useState(random)
 
 
@@ -169,7 +168,7 @@ const Cartnumicrease = ({ children }) => {
       data,
       setDdata,
       Ordernum,
-      setOrdernum
+      setOrdernum,
     }}>
       {children}
     </CartContext.Provider>

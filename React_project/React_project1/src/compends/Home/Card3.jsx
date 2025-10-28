@@ -43,7 +43,7 @@ const Card3 = () => {
                 <img src={item.url} className='h-60 w-full object-cover ' alt={item.name} onClick={() => handleCardClick(item)} />
                 <div className="text h-40 flex justify-center items-center flex-col gap-2  " onClick={() => handleCardClick(item)}>
                   <p className='capitalize text-lg'>{item.name}</p>
-                  <p className='font-bold pb-10'>{item.price}</p>
+                  <p className='font-bold pb-10'>Price:{item.price}</p>
                 </div>
               </div>
             ))}
