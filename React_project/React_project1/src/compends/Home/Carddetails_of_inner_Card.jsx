@@ -91,11 +91,11 @@ const Carddetails_of_inner_Card = () => {
 
                             <div className='flex justify-center items-center h-10 w-full border-2'>
                                 <button className=' cursor-pointer ' onClick={() => {
-                                    down(), down2()
+                                    down()
                                 }}>  <Minus color="#000000" strokeWidth={0.75} className='mr-3' />   </button>
                                 <p className='w-11/12 text-center'>{cartCount}</p>
                                 <button className=' cursor-pointer ' onClick={() => {
-                                    up(), up2()
+                                    up()
                                 }}> <Plus className='ml-3' color="#000000" strokeWidth={0.75} /></button>
                             </div>
 
