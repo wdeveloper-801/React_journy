@@ -29,7 +29,7 @@ const Addrespage = () => {
 
     return (
         <>
-            <div className=" mt-17 bg-gray-100 min-h-screen flex justify-center items-center flex-col ">
+            <div className="  bg-gray-100 min-h-screen flex justify-center items-center flex-col ">
                 <h1 className="text-3xl font-bold mb-6 text-center">Customer Orders</h1>
 
                 {/* Customer Info Form */}
