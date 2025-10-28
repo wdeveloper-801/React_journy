@@ -1,9 +1,9 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { CartContext } from '../compends/Context/Cartnumicrease'
 import { Link } from 'react-router-dom';
 
 const Addrespage = () => {
-    const { billpage,Ordernum } = useContext(CartContext);
+    const { billpage,Ordernum,setIsCartOpen } = useContext(CartContext);
 
     const [customer, setCustomer] = useState({
         name: "",
@@ -21,6 +21,11 @@ const Addrespage = () => {
         console.log("Customer info submitted:", customer);
         // You can send this to backend or save
     };
+    
+    useEffect(() => {
+    // Reset cart count
+        setIsCartOpen(false);  // Close sidebar
+    }, []);
 
     return (
         <>
