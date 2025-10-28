@@ -5,7 +5,7 @@ import { CartContext } from "../Context/Cartnumicrease";
 
 
 const Carddetails_of_inner_Card = () => {
-    const { cartCount, setCartCount, cartItems, setCartItems, setBillpage, billpage,  } = useContext(CartContext);
+    const { cartCount, setCartCount, cartItems, setCartItems, setBillpage, billpage, } = useContext(CartContext);
     const { state } = useLocation()
 
 
