@@ -2,7 +2,8 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-  value: 0,
+  value: localStorage.getItem('count') ,
+  color: 'green',
 }
 
 export const counterSlice = createSlice({
@@ -16,13 +17,19 @@ export const counterSlice = createSlice({
       state.value -= 1
     },
     upper: (state) => {
-        state.value +=5
-    }
+      state.value += 5
+    },
+    multiply: (state) => {
+      state.value *= 2
+    },
+    colorchange: (state) => {
+      state.color = state.color === 'green' ? 'blue' : 'green' // toggle colors
+    },
   },
 })
 
 // Export actions for components to use
-export const { increment, decrement,upper } = counterSlice.actions
+export const { increment, decrement, upper, multiply, colorchange } = counterSlice.actions
 
 // Export reducer to add to store
 export default counterSlice.reducer
